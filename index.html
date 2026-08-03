@@ -520,7 +520,7 @@
         title: "JCM Children's Home",
         tagline: "A safe haven ensuring total welfare.",
         tag: "CORE INITIATIVE",
-        image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80", // Replaced icon with image
+        image: "4.jpg", // Replaced icon with image
         stats: ["89 Children", "Holistic Care", "Active"],
         desc: "The heartbeat of Jedidiah Children's Mission Uganda (JCM). We provide a safe, loving residential environment for 89 children, fully ensuring their physical, social, mental, and spiritual needs are met.",
         ingredients: "Safe Shelter, Three Nutritious Meals a Day, Medical Attention, Caretaker Support."
@@ -529,7 +529,7 @@
         title: "Community Study Center",
         tagline: "Believing education is a fundamental right.",
         tag: "EDUCATION",
-        image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80",
+        image: "3.jpg",
         stats: ["180+ Pupils", "9 Classes", "Active"],
         desc: "Our educational outreach extends beyond the children's home. The JCM Study Center offers nine classes (from preschool through middle school) benefiting over 180 local children whose families cannot otherwise afford school fees.",
         ingredients: "Preschool to Middle School Curriculum, Literacy & Numeracy, Dedicated Teachers."
@@ -538,7 +538,7 @@
         title: "Vocational Training School",
         tagline: "Building skills for lifelong self-reliance.",
         tag: "EMPOWERMENT",
-        image: "https://images.unsplash.com/photo-1529390079861-591de354faf5?w=800&q=80",
+        image: "5.jpg",
         stats: ["Youth & Teens", "Practical Skills", "Active"],
         desc: "To effectively combat poverty, we equip young people with tangible, marketable skills. Our vocational courses allow youth to become economically independent and support their future families.",
         ingredients: "Tailoring & Seamstressing, Hair Dressing, Food Preparation & Catering."
@@ -547,7 +547,7 @@
         title: "Ministry & Fellowship",
         tagline: "Rooted deeply in Christian faith and community.",
         tag: "SPIRITUAL",
-        image: "https://images.unsplash.com/photo-1510172951991-856a654063f9?w=800&q=80",
+        image: "3.jpg",
         stats: ["All Residents", "Daily Ministry", "Active"],
         desc: "Faith is central to the restoration of hope. Jedidiah Children's Mission ensures that every child receives moral grounding and spiritual guidance in a loving Christian environment.",
         ingredients: "Daily Fellowship, Bible Study Groups, Sunday Services, Pastoral Mentorship."
@@ -555,33 +555,35 @@
 ];
 
         // 1. Render Mission Carousel (Placeholder Icons/Colors for Demo)
-        function renderMissionCarousel() {
-            const track = document.getElementById('mission-carousel');
-            if(!track) return;
-            
-            const carouselItems = [
-                { color: 'bg-jcm-navy', icon: '1.jpg' },
-                { color: 'bg-jcm-gold', icon: '2.jpg' },
-                { color: 'bg-jcm-emerald', icon: '3.jpg' },
-                { color: 'bg-jcm-sky', icon: '4.jpg' },
-                { color: 'bg-slate-700', icon: '5.jpg' }
-            ];
-            
-            let html = '';
-            const loopList = [...carouselItems, ...carouselItems, ...carouselItems, ...carouselItems]; 
+        // 1. Render Mission Carousel (Updated to use images)
+function renderMissionCarousel() {
+    const track = document.getElementById('mission-carousel');
+    if(!track) return;
+    
+    // Updated carousel data to use images
+    const carouselItems = [
+        { image: '2.jpg', alt: 'Safe Home' },
+        { image: '3.jpg', alt: 'Education' },
+        { image: '4.jpg', alt: 'Community' },
+        { image: '1.jpg', alt: 'Daily Life' },
+        { image: '5.jpg', alt: 'Skills Training' }
+    ];
+    
+    let html = '';
+    const loopList = [...carouselItems, ...carouselItems, ...carouselItems, ...carouselItems]; 
 
-            loopList.forEach((item, index) => {
-                html += `
-                    <div class="w-60 h-40 flex-shrink-0 rounded-2xl overflow-hidden shadow-md border-2 border-white relative group ${item.color} flex items-center justify-center text-white/50">
-                        <i class="fa-solid ${item.icon} text-5xl group-hover:scale-125 group-hover:text-white transition-all duration-500"></i>
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
-                            <span class="text-[10px] font-bold text-white uppercase tracking-wider">Mission Activity</span>
-                        </div>
-                    </div>
-                `;
-            });
-            track.innerHTML = html;
-        }
+    loopList.forEach((item, index) => {
+        html += `
+            <div class="w-60 h-40 flex-shrink-0 rounded-2xl overflow-hidden shadow-md border-2 border-white relative group bg-jcm-navy flex items-center justify-center">
+                <img src="${item.image}" alt="${item.alt}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <span class="text-[10px] font-bold text-white uppercase tracking-wider">Mission Activity</span>
+                </div>
+            </div>
+        `;
+    });
+    track.innerHTML = html;
+}
 
         // 2. Render Programs Grid
         function renderProgramsGrid() {
@@ -634,25 +636,26 @@
         }
 
         // 4. Modal Handlers
-        function openModal(idx) {
-            const data = missionPrograms[idx];
-            if(!data) return;
+        // 4. Modal Handlers (Updated to use images)
+function openModal(idx) {
+    const data = missionPrograms[idx];
+    if(!data) return;
 
-            document.getElementById('modal-title').innerText = data.title;
-            document.getElementById('modal-tagline').innerText = data.tagline;
-            document.getElementById('modal-tag').innerText = data.tag;
-            document.getElementById('modal-desc').innerText = data.desc;
-            document.getElementById('modal-ingredients').innerText = data.ingredients;
-            document.getElementById('stat-1').innerText = data.stats[0];
-            document.getElementById('stat-2').innerText = data.stats[1];
-            document.getElementById('stat-3').innerText = data.stats[2];
-            
-            const iconEl = document.getElementById('modal-icon');
-            iconEl.className = `fa-solid ${data.icon} text-6xl text-slate-300`;
+    document.getElementById('modal-title').innerText = data.title;
+    document.getElementById('modal-tagline').innerText = data.tagline;
+    document.getElementById('modal-tag').innerText = data.tag;
+    document.getElementById('modal-desc').innerText = data.desc;
+    document.getElementById('modal-ingredients').innerText = data.ingredients;
+    document.getElementById('stat-1').innerText = data.stats[0];
+    document.getElementById('stat-2').innerText = data.stats[1];
+    document.getElementById('stat-3').innerText = data.stats[2];
+    
+    // Inject the image source instead of changing font-awesome classes
+    const imgEl = document.getElementById('modal-image');
+    imgEl.src = data.image;
 
-            document.getElementById('product-modal').classList.remove('hidden');
-        }
-
+    document.getElementById('product-modal').classList.remove('hidden');
+}
         function closeModal() {
             document.getElementById('product-modal').classList.add('hidden');
         }
