@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Jedidiah Children's Mission Uganda (JCM) | Empowering Vulnerable Communities</title>
+    <meta name="description" content="Jedidiah Children's Mission Uganda (JCM) is a non-profit organization dedicated to empowering vulnerable individuals, orphans, and street children through holistic education, a safe home, and spiritual guidance.">
+    
+    <!-- ================= OPEN GRAPH & SOCIAL PREVIEW TAGS ================= -->
+    <link rel="canonical" href="https://jedidiahchildrensmission.org/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jedidiahchildrensmission.org/" />
+    <meta property="og:site_name" content="Jedidiah Children's Mission Uganda (JCM)" />
+    <meta property="og:title" content="Jedidiah Children's Mission Uganda (JCM) | A Safe Home & Education" />
+    <meta property="og:description" content="Empowering vulnerable individuals through holistic education, vocational training, and daily care in Uganda." />
+    <meta property="og:image" content="4.jpg" />
+    <meta property="og:image:secure_url" content="4.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Jedidiah Children's Mission Uganda Support Center" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://jedidiahchildrensmission.org/" />
+    <meta name="twitter:title" content="Jedidiah Children's Mission Uganda | Safe Home & Education" />
+    <meta name="twitter:description" content="Empowering vulnerable communities through holistic education, vocational training, and daily care in Uganda." />
+    <meta name="twitter:image" content="4.jpg" />
+
+    <!-- Tailwind CSS & Chart.js -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        jcm: {
+                            cream: '#FAF7F2',    // Sophisticated warm paper
+                            card: '#FFFFFF',     // Pure white surfaces
+                            navy: '#2C3E50',     // Deep trustworthy blue
+                            gold: '#F39C12',     // Hope & Warmth gold
+                            emerald: '#27AE60',  // Growth & Life green
+                            sky: '#3498DB',      // Friendly accent blue
+                            accent: '#E74C3C'    // Lively coral for CTAs
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- App Custom Styles -->
+    <style>
+        body { background: #FAF7F2; }
+        .glass {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(44, 62, 80, 0.08);
+        }
+        .glass-card {
+            background: linear-gradient(145deg, #FFFFFF 0%, #FAF7F2 100%);
+            border: 1px solid rgba(44, 62, 80, 0.06);
+            box-shadow: 0 12px 35px rgba(44, 62, 80, 0.05);
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .fade-up { animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* 10-Photo Infinite Carousel Animation */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-240px * 10)); }
+        }
+        .carousel-track {
+            display: flex;
+            width: calc(240px * 20);
+            animation: scroll 40s linear infinite;
+        }
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+
+<body class="bg-jcm-cream text-jcm-navy font-sans min-h-screen flex flex-col selection:bg-jcm-gold selection:text-jcm-navy overflow-x-hidden">
+
+    <!-- Subtle Background Accents -->
+    <div class="fixed inset-0 overflow-hidden -z-10 pointer-events-none opacity-40">
+        <div class="absolute -top-[10%] -left-[10%] w-[500px] h-[500px] bg-jcm-sky/10 rounded-full blur-[120px]"></div>
+        <div class="absolute top-[30%] -right-[10%] w-[600px] h-[600px] bg-jcm-gold/10 rounded-full blur-[140px]"></div>
+        <div class="absolute -bottom-[10%] left-[20%] w-[500px] h-[500px] bg-jcm-emerald/10 rounded-full blur-[120px]"></div>
+    </div>
+
+    <!-- DESKTOP / TOP HEADER -->
+    <header class="fixed top-0 w-full z-40 px-4 sm:px-6 py-4 transition-all duration-300">
+        <div class="max-w-7xl mx-auto glass rounded-2xl sm:rounded-full px-5 py-3 flex justify-between items-center shadow-md shadow-jcm-navy/5">
+            <!-- Brand Logo -->
+            <div class="flex items-center gap-3 cursor-pointer" onclick="switchView('home')">
+                <div class="h-11 w-11 rounded-full bg-jcm-navy flex items-center justify-center text-jcm-gold shadow-inner border border-jcm-gold/40 flex-shrink-0">
+                    <i class="fa-solid fa-hands-holding-child text-xl"></i>
+                </div>
+                <div>
+                    <span class="block text-sm sm:text-base font-extrabold tracking-tight text-jcm-navy font-serif uppercase">Jedidiah Children's Mission</span>
+                    <span class="block text-[9px] sm:text-[10px] text-jcm-emerald font-bold tracking-widest uppercase">Uganda • Nyendo, Masaka</span>
+                </div>
+            </div>
+
+            <!-- Desktop Nav Links -->
+            <div class="hidden lg:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-jcm-navy/70">
+                <button onclick="switchView('home')" id="d-nav-home" class="text-jcm-emerald transition-colors font-extrabold border-b-2 border-jcm-emerald pb-0.5">Home</button>
+                <button onclick="switchView('programs')" id="d-nav-programs" class="hover:text-jcm-emerald transition-colors">Our Programs</button>
+                <button onclick="switchView('impact')" id="d-nav-impact" class="hover:text-jcm-emerald transition-colors">Our Impact</button>
+                <button onclick="switchView('leadership')" id="d-nav-leadership" class="hover:text-jcm-emerald transition-colors">Leadership Desk</button>
+                
+                <!-- Donation Link: Replace '#' with your actual donation URL -->
+                <a href="YOUR_DONATION_PAGE_LINK_HERE" class="bg-jcm-emerald hover:bg-jcm-navy text-white px-6 py-2.5 rounded-full transition-all shadow-lg shadow-jcm-emerald/20 flex items-center gap-2 text-xs font-extrabold">
+                    <span class="w-2 h-2 rounded-full bg-jcm-gold animate-ping"></span>
+                    <span>Support Our Mission</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN APP VIEW PORT -->
+    <main class="flex-1 pt-28 pb-32 px-4 md:px-8 max-w-7xl mx-auto w-full">
+        
+        <!-- ================= TAB 1: HOME ================= -->
+        <section id="view-home" class="space-y-16 fade-up">
+            
+            <!-- HERO BANNER -->
+            <div class="relative rounded-3xl overflow-hidden bg-jcm-navy text-white shadow-2xl border border-jcm-gold/20 p-8 sm:p-12 lg:p-16 flex flex-col lg:flex-row items-center justify-between">
+                <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-jcm-emerald/20 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div class="lg:w-7/12 z-10 space-y-6 text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-jcm-gold/15 text-jcm-gold border border-jcm-gold/30 text-xs font-bold tracking-wide">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>FOUNDED IN 2017 • REGISTERED NGO / NPO</span>
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-extrabold leading-[1.15]">
+                        Providing a <span class="text-transparent bg-clip-text bg-gradient-to-r from-jcm-gold via-yellow-200 to-amber-400">Safe Home</span> & Hope.
+                    </h1>
+                    
+                    <p class="text-slate-300 text-sm sm:text-base max-w-xl font-normal leading-relaxed">
+                        Welcome to Jedidiah Children's Mission Uganda (JCM). We empower vulnerable individuals—including orphans, street children, and those with disabilities—through holistic education, vocational skills, daily care, and spiritual guidance.
+                    </p>
+                    
+                    <div class="pt-2 flex flex-wrap gap-4 items-center">
+                        <!-- Donation Link: Replace '#' with your actual donation URL -->
+                        <a href="YOUR_DONATION_PAGE_LINK_HERE" class="bg-jcm-gold text-jcm-navy px-8 py-3.5 rounded-xl font-bold text-sm hover:bg-yellow-400 transition-all shadow-xl shadow-jcm-gold/10 flex items-center gap-3">
+                            <i class="fa-solid fa-hand-holding-heart text-lg"></i>
+                            <span>Sponsor a Child Today</span>
+                        </a>
+                        <button onclick="switchView('programs')" class="px-6 py-3.5 rounded-xl font-bold text-sm bg-white/10 hover:bg-white/20 border border-white/15 transition-all text-white">
+                            View Our Programs
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mt-10 lg:mt-0 lg:w-4/12 relative flex justify-center">
+                    <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full p-2 bg-gradient-to-tr from-jcm-gold to-jcm-emerald shadow-2xl animate-[spin_60s_linear_infinite]">
+                        <img src="1.jpg" alt="Children of Jedidiah Children's Mission" class="w-full h-full object-cover rounded-full border-4 border-jcm-navy animate-[spin_60s_linear_infinite_reverse]">
+                    </div>
+                    <div class="absolute -bottom-4 bg-white text-jcm-navy px-5 py-2.5 rounded-2xl shadow-xl flex items-center gap-3 border border-slate-100">
+                        <div class="text-jcm-emerald font-black text-xl">180+</div>
+                        <div class="text-[11px] font-bold leading-tight uppercase tracking-wider">Children<br>Supported Daily</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INFINITE SLIDING CAROUSEL -->
+            <div class="space-y-4 pt-4 overflow-hidden">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-2 px-2">
+                    <div>
+                        <span class="text-jcm-navy text-xs font-black tracking-widest uppercase">Daily Life at JCM</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-jcm-navy font-serif mt-1">A Snapshot of Our Community</h2>
+                    </div>
+                    <p class="text-xs font-bold text-jcm-navy italic">Nurturing bodies, minds, and spirits.</p>
+                </div>
+
+                <!-- Infinite CSS Loop Track Wrapper -->
+                <div class="relative w-full overflow-hidden py-4 before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-16 before:bg-gradient-to-r before:from-jcm-cream before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-16 after:bg-gradient-to-l after:from-jcm-cream after:to-transparent">
+                    <div id="mission-carousel" class="carousel-track flex gap-4">
+                        <!-- JS Injected Photos Duplicated for Continuous Loop -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- BRIEF INITIATIVES PREVIEW -->
+            <div class="space-y-6">
+                <div class="flex justify-between items-center border-b border-jcm-navy/10 pb-4">
+                    <h2 class="text-2xl font-serif font-bold text-jcm-navy">Core Initiatives</h2>
+                    <button onclick="switchView('programs')" class="text-sm font-bold text-jcm-navy hover:underline flex items-center gap-1">
+                        Click to view Programs <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="glass-card p-6 rounded-2xl border-l-4 border-l-jcm-gold space-y-3">
+                        <div class="w-10 h-10 rounded-lg bg-jcm-gold/10 text-jcm-gold flex items-center justify-center font-bold text-lg">01</div>
+                        <h3 class="font-bold text-lg text-jcm-navy">Children's Home</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Providing secure accommodation, regular medical care, and safe shelters for 89 resident children and orphans.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl border-l-4 border-l-jcm-emerald space-y-3">
+                        <div class="w-10 h-10 rounded-lg bg-jcm-emerald/10 text-jcm-emerald flex items-center justify-center font-bold text-lg">02</div>
+                        <h3 class="font-bold text-lg text-jcm-navy">Community Study Center</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Offering formal tuition-free classes from preschool through middle school to help local disadvantaged families.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl border-l-4 border-l-jcm-sky space-y-3">
+                        <div class="w-10 h-10 rounded-lg bg-jcm-sky/10 text-jcm-sky flex items-center justify-center font-bold text-lg">03</div>
+                        <h3 class="font-bold text-lg text-jcm-navy">Vocational School</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Practical seamstressing, tailoring, and catering skills enabling older children and young people to earn a self-reliant living.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PARTNERSHIP ENQUIRY FORM SECTION -->
+            <div class="glass-card rounded-3xl p-8 sm:p-12 border border-jcm-navy/10 relative overflow-hidden bg-gradient-to-b from-white to-jcm-cream">
+                <div class="max-w-2xl mx-auto text-center space-y-4 mb-8">
+                    <h2 class="text-3xl font-serif font-extrabold text-jcm-navy">Join Us in Making a Difference</h2>
+                    <p class="text-sm text-slate-600">Connect with us to sponsor a child, find volunteer opportunities, or sign up for regular newsletters.</p>
+                </div>
+
+                <form id="contactForm" onsubmit="handleContact(event)" class="max-w-xl mx-auto space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-[11px] font-bold uppercase tracking-wider text-jcm-navy mb-1">Full Name *</label>
+                            <input type="text" required placeholder="e.g. Sarah Jenkins" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-jcm-emerald text-sm bg-white">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-bold uppercase tracking-wider text-jcm-navy mb-1">Phone / WhatsApp Number</label>
+                            <input type="tel" placeholder="+1 555-019-2834" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-jcm-emerald text-sm bg-white">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-[11px] font-bold uppercase tracking-wider text-jcm-navy mb-1">Email Address *</label>
+                            <input type="email" required placeholder="e.g. sarah@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-jcm-emerald text-sm bg-white">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-bold uppercase tracking-wider text-jcm-navy mb-1">Inquiry Purpose</label>
+                            <select class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-jcm-emerald text-sm bg-white font-medium text-slate-700">
+                                <option>Child Sponsorship</option>
+                                <option>Volunteer Opportunities</option>
+                                <option>Donation Program Details</option>
+                                <option>Partnership & Mentorship</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-[11px] font-bold uppercase tracking-wider text-jcm-navy mb-1">Your message or questions?</label>
+                        <textarea rows="3" placeholder="Tell us how you would like to collaborate or support our operations..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-jcm-emerald text-sm bg-white"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-jcm-navy hover:bg-jcm-emerald text-jcm-gold font-extrabold py-4 rounded-xl shadow-lg transition-all text-sm uppercase tracking-widest">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- ================= TAB 2: PROGRAMS ================= -->
+        <section id="view-programs" class="hidden space-y-8 fade-up">
+            <div class="glass-card rounded-3xl p-8 border-l-8 border-l-jcm-emerald">
+                <h2 class="text-3xl font-serif font-extrabold text-jcm-navy">Our Mission Programs</h2>
+                <p class="text-sm text-jcm-navy mt-1">Select any initiative below to view our focus areas, daily routines, and program requirements.</p>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6" id="programs-grid-container">
+                <!-- Dynamically Populated via JS -->
+            </div>
+        </section>
+
+        <!-- ================= TAB 3: OUR IMPACT ================= -->
+        <section id="view-impact" class="hidden space-y-12 fade-up">
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <span class="text-jcm-navy text-xs font-black tracking-widest uppercase">The JCM Impact Advantage</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-jcm-navy">Accountable & Hope-Driven Care</h2>
+                <p class="text-sm text-jcm-navy">In Nyendo, Masaka, JCM serves as a protective bridge toward security, learning, and self-reliance.</p>
+            </div>
+
+            <!-- Feature Badges -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 space-y-3">
+                    <div class="w-12 h-12 bg-jcm-gold/15 text-jcm-gold rounded-xl flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-stamp"></i></div>
+                    <h3 class="font-bold text-jcm-navy">Formally Registered</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Fully registered and authorized non-profit operating in Uganda, complemented by co-founded operations in the US since 2020.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 space-y-3">
+                    <div class="w-12 h-12 bg-jcm-emerald/15 text-jcm-emerald rounded-xl flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 class="font-bold text-jcm-navy">Secure Gated Home</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Providing reliable security, full meals, clothing, and individual emotional attention in a warm communal space.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 space-y-3">
+                    <div class="w-12 h-12 bg-jcm-sky/15 text-jcm-sky rounded-xl flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3 class="font-bold text-jcm-navy">Formal Education Center</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Integrating customized foundational schooling with certified vocational structures for teenagers.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 space-y-3">
+                    <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-hands-holding"></i></div>
+                    <h3 class="font-bold text-jcm-navy">Faith & Character Development</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Mentorship rooted in healthy developmental values, regular fellowship, and communal support networks.</p>
+                </div>
+            </div>
+
+            <!-- Visual Charts Section -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass-card rounded-3xl p-6 sm:p-8">
+                    <h3 class="text-sm font-black uppercase tracking-wider text-jcm-navy mb-6 flex items-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-jcm-gold"></span> Demographics Supported
+                    </h3>
+                    <div class="h-64 relative flex justify-center">
+                        <canvas id="macroChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-3xl p-6 sm:p-8">
+                    <h3 class="text-sm font-black uppercase tracking-wider text-jcm-navy mb-6 flex items-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-jcm-emerald"></span> Community Impact Scale
+                    </h3>
+                    <div class="h-64 relative">
+                        <canvas id="mineralChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TAB 4: LEADERSHIP DESK ================= -->
+        <section id="view-leadership" class="hidden space-y-12 fade-up">
+            
+            <!-- CO-FOUNDERS & STAFF SECTION -->
+            <div class="space-y-8">
+                <div class="text-center max-w-xl mx-auto">
+                    <h3 class="text-2xl font-serif font-bold text-jcm-navy">Dedicated Care Team</h3>
+                    <p class="text-sm text-jcm-navy mt-1">Passionate professionals, teachers, and coordinators working around the clock to create a healthy ecosystem.</p>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Care Team Group Photo Banner -->
+                    <div class="glass-card rounded-3xl overflow-hidden border border-jcm-navy/10 p-4">
+                        <div class="aspect-[21/9] sm:aspect-[3/1] rounded-2xl overflow-hidden bg-slate-100">
+                            <img src="4.jpg" class="w-full h-full object-cover" alt="Jedidiah Children's Mission Team">
+                        </div>
+                        <div class="mt-3 text-center">
+                            <h4 class="font-serif font-bold text-base text-jcm-navy">JCM Staff & Educators</h4>
+                            <p class="text-xs text-jcm-emerald font-bold tracking-wider uppercase">Unified in purpose to bring hope, dignity, and stability to vulnerable children</p>
+                        </div>
+                    </div>
+
+                    <!-- Individual Care Team Grid -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <!-- Member 1 -->
+                        <div class="bg-white p-3 rounded-2xl border border-slate-100 shadow-sm text-center space-y-2 group">
+                            <div class="aspect-square rounded-xl overflow-hidden bg-slate-100 flex items-center justify-center">
+                                <i class="fa-solid fa-user-tie text-4xl text-slate-400"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-jcm-navy text-sm truncate">Pst. Pius Kabiswa</h5>
+                                <p class="text-[11px] text-slate-500 font-semibold">Director & Founder (Uganda)</p>
+                            </div>
+                        </div>
+                        <!-- Member 2 -->
+                        <div class="bg-white p-3 rounded-2xl border border-slate-100 shadow-sm text-center space-y-2 group">
+                            <div class="aspect-square rounded-xl overflow-hidden bg-slate-100 flex items-center justify-center">
+                                <i class="fa-solid fa-user-tie text-4xl text-slate-400"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-jcm-navy text-sm truncate">Kelsey Lininger</h5>
+                                <p class="text-[11px] text-slate-500 font-semibold">Co-Founder (USA Partner)</p>
+                            </div>
+                        </div>
+                        <!-- Member 3 -->
+                        <div class="bg-white p-3 rounded-2xl border border-slate-100 shadow-sm text-center space-y-2 group">
+                            <div class="aspect-square rounded-xl overflow-hidden bg-slate-100 flex items-center justify-center">
+                                <i class="fa-solid fa-user-graduate text-4xl text-slate-400"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-jcm-navy text-sm truncate">Study Center Head</h5>
+                                <p class="text-[11px] text-slate-500 font-semibold">Education Coordinator</p>
+                            </div>
+                        </div>
+                        <!-- Member 4 -->
+                        <div class="bg-white p-3 rounded-2xl border border-slate-100 shadow-sm text-center space-y-2 group">
+                            <div class="aspect-square rounded-xl overflow-hidden bg-slate-100 flex items-center justify-center">
+                                <i class="fa-solid fa-people-carry-box text-4xl text-slate-400"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-jcm-navy text-sm truncate">Community Outreach</h5>
+                                <p class="text-[11px] text-slate-500 font-semibold">Social Work Supervisor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ADMINISTRATIVE MESSAGES SECTION -->
+            <div class="space-y-8 pt-8 border-t border-jcm-navy/10">
+                <div class="text-center max-w-xl mx-auto">
+                    <h2 class="text-3xl font-serif font-bold text-jcm-navy">Our Visionary Stewards</h2>
+                    <p class="text-sm text-jcm-navy mt-1">Direct words from the administrative leaders of Jedidiah Children's Mission</p>
+                </div>
+
+                <!-- Administration Grid -->
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Director Desk -->
+                    <div class="glass-card rounded-3xl overflow-hidden border border-jcm-navy/10 flex flex-col">
+                        <div class="bg-gradient-to-r from-jcm-navy to-slate-800 p-6 text-white flex items-center gap-4">
+                            <div class="w-16 h-16 rounded-full border-2 border-jcm-gold bg-slate-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-user text-xl text-jcm-gold"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-bold text-xl text-jcm-gold">Pst. Pius Kabiswa Kiryowa</h3>
+                                <p class="text-xs uppercase tracking-widest text-slate-300 font-bold">Volunteer Founder (Uganda)</p>
+                            </div>
+                        </div>
+                        <div class="p-8 space-y-4 flex-1 flex flex-col justify-between">
+                            <blockquote class="text-sm text-slate-700 leading-relaxed italic border-l-4 border-jcm-gold pl-4">
+                                "Having grown up as an orphan myself, I understand the challenges and vulnerability of street children and orphans. My deepest motivation in founding JCM in 2017 was to create the protective, educational ecosystem these youth need. Every child should have safe shelter, basic education, and the opportunity to realize their full potential."
+                            </blockquote>
+                            <div class="pt-4 text-right">
+                                <span class="font-serif font-bold text-jcm-navy tracking-wider text-sm">~ Pst. Pius Kabiswa Kiryowa</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- US Partner Desk -->
+                    <div class="glass-card rounded-3xl overflow-hidden border border-jcm-navy/10 flex flex-col">
+                        <div class="bg-jcm-emerald p-6 text-white flex items-center gap-4">
+                            <div class="w-16 h-16 rounded-full border-2 border-white bg-slate-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-user text-xl text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-bold text-xl text-white">Kelsey Lininger</h3>
+                                <p class="text-xs uppercase tracking-widest text-emerald-100 font-bold">NPO Co-Founder (USA Partner)</p>
+                            </div>
+                        </div>
+                        <div class="p-8 space-y-4 flex-1 flex flex-col justify-between">
+                            <blockquote class="text-sm text-slate-700 leading-relaxed italic border-l-4 border-jcm-emerald pl-4">
+                                "In 2020, we formally partnered in the United States to build an institutional bridge of support. By collaborating with international donors and structures, we aim to ensure resource predictability. We aim to help orphans and vulnerable young people break structural dependencies."
+                            </blockquote>
+                            <div class="pt-4 text-right">
+                                <span class="font-serif font-bold text-jcm-navy tracking-wider text-sm">~ Kelsey Lininger</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Donation Call Banner (Nice CTA with placeholders) -->
+            <div class="bg-gradient-to-r from-jcm-gold/20 to-jcm-emerald/10 p-8 rounded-3xl text-center border border-jcm-gold/30 space-y-4">
+                <h4 class="font-bold text-jcm-navy text-xl">Sponsor Our Programs Today</h4>
+                <p class="text-sm text-slate-600 max-w-xl mx-auto">
+                    Your sponsorship helps provide safe shelter, nutritious meals, primary education, and clean facilities to children in Nyendo, Masaka.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <!-- Donation Link: Replace 'YOUR_DONATION_PAGE_LINK_HERE' with your real checkout or donation processor page -->
+                    <a href="YOUR_DONATION_PAGE_LINK_HERE" class="inline-flex items-center gap-2 bg-jcm-emerald text-white px-8 py-3.5 rounded-full text-xs font-black hover:bg-jcm-navy transition-all shadow-md">
+                        <i class="fa-solid fa-heart"></i> MAKE A DONATION ONLINE
+                    </a>
+                    <a href="https://wa.me/256750838511?text=Hello%20JCM%20Uganda,%20I%20would%20like%20to%20know%20more%20about%20child%20sponsorship." target="_blank" class="inline-flex items-center gap-2 bg-jcm-navy text-white px-6 py-3.5 rounded-full text-xs font-bold hover:bg-slate-700 transition-all">
+                        <i class="fa-brands fa-whatsapp text-emerald-400"></i> Inquiry on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-jcm-navy text-white pt-16 pb-24 md:pb-12 border-t-4 border-jcm-gold">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+            <div class="md:col-span-2 space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="h-8 w-8 rounded-full bg-jcm-gold text-jcm-navy flex items-center justify-center font-bold">JCM</div>
+                    <span class="font-serif font-bold text-xl tracking-wider uppercase">Jedidiah Children's Mission</span>
+                </div>
+                <p class="text-xs text-slate-300 max-w-sm leading-relaxed">
+                    A registered non-profit mission operating in Uganda and partnered with US sponsors. Committed to supporting street children, orphans, and communities in Masaka.
+                </p>
+                <div class="text-xs text-jcm-gold font-bold">
+                    🟢 ONLINE SPONSORSHIPS & SUPPORT ARE ALWAYS WELCOME
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-xs font-bold uppercase tracking-widest text-jcm-gold mb-3">Navigation</h4>
+                <ul class="space-y-2 text-xs text-slate-300">
+                    <li><button onclick="switchView('home')" class="hover:text-white">Home Page</button></li>
+                    <li><button onclick="switchView('programs')" class="hover:text-white">Programs & Services</button></li>
+                    <li><button onclick="switchView('impact')" class="hover:text-white">Our Impact</button></li>
+                    <li><button onclick="switchView('leadership')" class="hover:text-white">Our Leadership</button></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-xs font-bold uppercase tracking-widest text-jcm-gold mb-3">Contact Desk</h4>
+                <div class="space-y-2.5 text-xs text-slate-300">
+                    <p class="flex items-start gap-2"><i class="fa-solid fa-location-dot text-jcm-gold mt-0.5"></i> Nyendo, Masaka, Uganda</p>
+                    <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-jcm-gold"></i> +256 750 838511</p>
+                    <p class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-[#25D366]"></i> +256 750 838511</p>
+                    <p class="flex items-center gap-2 text-slate-400 italic"><i class="fa-solid fa-envelope text-jcm-gold"></i> contact@jedidiahchildrensmission.org</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 pt-6 text-center text-[11px] text-slate-500 font-medium flex flex-col sm:flex-row justify-between items-center gap-2">
+            <span>&copy; 2026 Jedidiah Children's Mission Uganda (JCM). Registered US & Uganda Non-Profit Organizations.</span>
+            <span>Support • Protect • Empower</span>
+        </div>
+    </footer>
+
+    <!-- MOBILE BOTTOM APP NAVIGATION -->
+    <nav class="lg:hidden fixed bottom-4 left-1/2 -translate-x-1/2 w-[92%] max-w-md z-50">
+        <div class="glass bg-jcm-navy/95 text-white rounded-full px-4 py-3 flex justify-around items-center shadow-2xl border border-white/10">
+            <button onclick="switchView('home')" id="m-nav-home" class="flex flex-col items-center text-jcm-gold w-14">
+                <i class="fa-solid fa-house text-base"></i>
+                <span class="text-[9px] mt-1 font-bold">Home</span>
+            </button>
+            <button onclick="switchView('programs')" id="m-nav-programs" class="flex flex-col items-center text-slate-400 hover:text-white w-14">
+                <i class="fa-solid fa-hand-holding-heart text-base"></i>
+                <span class="text-[9px] mt-1 font-bold">Programs</span>
+            </button>
+            <button onclick="switchView('impact')" id="m-nav-impact" class="flex flex-col items-center text-slate-400 hover:text-white w-14">
+                <i class="fa-solid fa-chart-line text-base"></i>
+                <span class="text-[9px] mt-1 font-bold">Impact</span>
+            </button>
+            <button onclick="switchView('leadership')" id="m-nav-leadership" class="flex flex-col items-center text-slate-400 hover:text-white w-14">
+                <i class="fa-solid fa-user-tie text-base"></i>
+                <span class="text-[9px] mt-1 font-bold">Leaders</span>
+            </button>
+            <!-- Donation Link: Replace '#' with your actual donation URL -->
+            <a href="YOUR_DONATION_PAGE_LINK_HERE" class="flex flex-col items-center text-jcm-gold w-12 pl-1 border-l border-white/15">
+                <i class="fa-solid fa-heart text-xl animate-pulse"></i>
+                <span class="text-[8px] mt-0.5 font-bold text-white">Donate</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- PROGRAM DETAIL MODAL -->
+    <div id="product-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4" aria-modal="true">
+        <div class="absolute inset-0 bg-jcm-navy/70 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
+        
+        <div class="relative w-full max-w-3xl bg-white rounded-3xl shadow-2xl overflow-hidden z-10 flex flex-col md:grid md:grid-cols-12 border border-slate-100 max-h-[90vh]">
+            
+            <div class="w-full h-52 sm:h-64 md:h-auto md:col-span-5 relative bg-jcm-cream flex-shrink-0">
+                <img id="modal-img" src="" class="absolute inset-0 w-full h-full object-cover" alt="Program Focus">
+                <div class="absolute top-4 left-4 bg-jcm-navy text-jcm-gold text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow z-10">
+                    <span id="modal-tag">CATEGORY</span>
+                </div>
+            </div>
+
+            <div class="md:col-span-7 p-6 sm:p-8 flex-1 overflow-y-auto space-y-5">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 id="modal-title" class="text-2xl font-serif font-bold text-jcm-navy">Program Name</h3>
+                        <p id="modal-tagline" class="text-xs font-bold text-jcm-emerald mt-0.5">Subtitle</p>
+                    </div>
+                    <button onclick="closeModal()" class="w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center hover:bg-red-700 transition-colors">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-3 gap-2 py-2 border-y border-slate-100 text-center">
+                    <div class="p-2"><div id="stat-1" class="text-xs font-black text-jcm-navy">--</div><div class="text-[9px] uppercase text-slate-400">Reach</div></div>
+                    <div class="p-2 border-x border-slate-100"><div id="stat-2" class="text-xs font-black text-jcm-navy">--</div><div class="text-[9px] uppercase text-slate-400">Focus</div></div>
+                    <div class="p-2"><div id="stat-3" class="text-xs font-black text-jcm-navy">--</div><div class="text-[9px] uppercase text-slate-400">Status</div></div>
+                </div>
+
+                <div>
+                    <h4 class="text-[11px] font-black uppercase text-slate-400 tracking-wider mb-1">Program Overview</h4>
+                    <p id="modal-desc" class="text-xs text-slate-600 leading-relaxed font-medium"></p>
+                </div>
+
+                <div>
+                    <h4 class="text-[11px] font-black uppercase text-slate-400 tracking-wider mb-1">Core Components</h4>
+                    <p id="modal-ingredients" class="text-xs text-jcm-navy font-bold bg-jcm-cream p-3 rounded-xl border border-jcm-navy/5"></p>
+                </div>
+
+                <!-- Donation Link: Replace '#' with your actual donation URL -->
+                <a href="YOUR_DONATION_PAGE_LINK_HERE" class="w-full mt-4 bg-[#27AE60] hover:bg-emerald-600 text-white font-extrabold py-3.5 rounded-xl flex items-center justify-center gap-2 text-xs uppercase tracking-wider shadow-lg shadow-green-500/10">
+                    <i class="fa-solid fa-heart"></i> Support This Initiative
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NETWORK STATUS TOAST NOTIFICATION -->
+    <div id="network-toast" class="fixed top-24 left-1/2 -translate-x-1/2 z-50 hidden transform transition-all duration-300 max-w-sm w-[90%] sm:w-auto">
+        <div id="toast-content" class="px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 text-xs font-bold uppercase tracking-wider text-white border backdrop-blur-md">
+            <i id="toast-icon" class="fa-solid text-sm"></i>
+            <span id="toast-text"></span>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT APPLICATION LOGIC -->
+    <script>
+        // JCM Program Divisions Data (6 items to perfectly map the CSS layout of original file)
+        const missionPrograms = [
+            {
+                title: "Children's Residential Home",
+                tagline: "Secure housing and daily care for orphans",
+                tag: "HOUSING & SHELTER",
+                image: "4.jpg",
+                stats: ["89 Kids", "24/7 Support", "Active"],
+                desc: "The protective core of Jedidiah Children's Mission. Providing a stable home where physical, health, and security standards are strictly observed, alongside balanced daily meals and medical attention.",
+                ingredients: "Safe Dormitories, Hygienic Kitchens, On-Site Nurse Assistance, Mentors, Daily Parent-Style Care."
+            },
+            {
+                title: "Community Study Center",
+                tagline: "Academics and school structures for vulnerable families",
+                tag: "BASIC EDUCATION",
+                image: "3.jpg",
+                stats: ["180+ Pupils", "9 Classes", "Active"],
+                desc: "A full learning pathway from preschool to middle school level. Formulated for kids whose parents or legal guardians are financially unable to meet standard state tuition obligations.",
+                ingredients: "Tuition-Free Education, Textbooks & Stationery, Dedicated Teaching Staff, Continuous Assessment Exams."
+            },
+            {
+                title: "Vocational Skills Training",
+                tagline: "Earning independence through practical programs",
+                tag: "VOCATIONAL TRAINING",
+                image: "5.jpg",
+                stats: ["Teens & Youth", "Certified Labs", "Active"],
+                desc: "Reducing dependencies by imparting reliable micro-enterprise skills. Enables older teenagers and local community members to learn sewing, hair braiding, food safety, and tailoring.",
+                ingredients: "Tailoring & Pattern-making, Hair Styling, Food Catering & Baking, Basic Accounting Foundations."
+            },
+            {
+                title: "Healthcare & Nutrition Outreach",
+                tagline: "Combatting malnutrition & keeping communities healthy",
+                tag: "MEDICAL & NUTRITION",
+                image: "2.jpg",
+                stats: ["Masaka Region", "Nutritious Food", "Active"],
+                desc: "A critical community response, addressing nutrition deficiencies and basic healthcare needs of vulnerable families, orphans, and HIV-positive youth within Masaka.",
+                ingredients: "Balanced Core Meals, Outpatient Health Screenings, Hygiene Education, Basic Medicine Dispersal."
+            },
+            {
+                title: "Ministry & Moral Mentorship",
+                tagline: "Grounding youth in character and Christian ethics",
+                tag: "FAITH & CHARACTER",
+                image: "1.jpg",
+                stats: ["Daily", "Faith-Based", "Active"],
+                desc: "An essential component designed to construct reliable psychological and moral structures. Our children grow within positive character models and ethical frameworks.",
+                ingredients: "Daily Bible Fellowships, Character Seminars, Moral Support, Family Counselling, Sunday Community Gatherings."
+            },
+            {
+                title: "Sustainable Farm & Agriculture",
+                tagline: "Fostering community food security and farming skills",
+                tag: "SELF-SUSTAINABILITY",
+                image: "3.jpg",
+                stats: ["Community Farm", "Practical Farming", "Active"],
+                desc: "Promoting local sustainability. The community agricultural field serves both as an instructional center for basic farming and as a secondary crop source to lower food expenditures.",
+                ingredients: "Basic Crop Farming, Animal Husbandry Basics, Gardening tools, Local Resource Harvesting."
+            }
+        ];
+
+        // 1. Render Carousel (Looping JCM local assets)
+        function renderMissionCarousel() {
+            const track = document.getElementById('mission-carousel');
+            if(!track) return;
+            
+            const myImages = [
+                '1.jpg',
+                '2.jpg',
+                '3.jpg',
+                '4.jpg',
+                '5.jpg',
+                '1.jpg',
+                '2.jpg',
+                '3.jpg',
+                '4.jpg',
+                '5.jpg'
+            ];
+            
+            let html = '';
+            const photoList = [...myImages, ...myImages]; 
+
+            photoList.forEach((imagePath, index) => {
+                const imgNum = (index % 10) + 1;
+                html += `
+                    <div class="w-60 h-40 flex-shrink-0 rounded-2xl overflow-hidden shadow-md border-2 border-white relative group bg-slate-200">
+                        <img src="${imagePath}" alt="Jedidiah Children's Mission Activity Photo ${imgNum}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-jcm-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+                            <span class="text-[10px] font-bold text-white uppercase tracking-wider"><i class="fa-solid fa-camera text-jcm-gold"></i> Mission activity #${imgNum}</span>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            track.innerHTML = html;
+        }
+
+        // 2. Render Programs Grid
+        function renderProgramsGrid() {
+            const container = document.getElementById('programs-grid-container');
+            if(!container) return;
+            
+            container.innerHTML = missionPrograms.map((item, idx) => `
+                <article onclick="openModal(${idx})" class="group glass-card rounded-2xl p-3.5 cursor-pointer hover:-translate-y-1.5 transition-all duration-300 relative flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-3 bg-slate-100 relative">
+                            <img src="${item.image}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="${item.title}">
+                            <span class="absolute top-2 left-2 bg-jcm-navy/90 text-white text-[9px] font-black px-2 py-0.5 rounded backdrop-blur">${item.tag}</span>
+                        </div>
+                        <h3 class="font-bold text-jcm-navy text-sm sm:text-base leading-snug">${item.title}</h3>
+                        <p class="text-[11px] text-slate-500 line-clamp-2 mt-1">${item.tagline}</p>
+                    </div>
+                    <div class="mt-3 pt-2 border-t border-slate-100 flex justify-between items-center text-jcm-emerald font-bold text-xs">
+                        <span>Explore Program Details</span>
+                        <i class="fa-solid fa-circle-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        // 3. Tab Navigation Router
+        function switchView(viewId) {
+            const views = ['home', 'programs', 'impact', 'leadership'];
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            views.forEach(v => {
+                const el = document.getElementById(`view-${v}`);
+                const dBtn = document.getElementById(`d-nav-${v}`);
+                const mBtn = document.getElementById(`m-nav-${v}`);
+
+                if(v === viewId) {
+                    el?.classList.remove('hidden');
+                    if(dBtn) dBtn.className = "text-jcm-emerald font-extrabold transition-colors border-b-2 border-jcm-emerald pb-0.5";
+                    if(mBtn) mBtn.className = "flex flex-col items-center text-jcm-gold w-14 scale-105 transition-transform";
+                    
+                    // Lazy initialize charts when "Our Impact" tab opens
+                    if(v === 'impact' && !window.chartsInitialized) {
+                        initCharts();
+                        window.chartsInitialized = true;
+                    }
+                } else {
+                    el?.classList.add('hidden');
+                    if(dBtn) dBtn.className = "hover:text-jcm-emerald transition-colors font-bold text-jcm-navy/70";
+                    if(mBtn) mBtn.className = "flex flex-col items-center text-slate-400 hover:text-white w-14";
+                }
+            });
+        }
+
+        // 4. Modal Handlers
+        function openModal(idx) {
+            const data = missionPrograms[idx];
+            if(!data) return;
+
+            document.getElementById('modal-title').innerText = data.title;
+            document.getElementById('modal-tagline').innerText = data.tagline;
+            document.getElementById('modal-tag').innerText = data.tag;
+            document.getElementById('modal-img').src = data.image;
+            document.getElementById('modal-desc').innerText = data.desc;
+            document.getElementById('modal-ingredients').innerText = data.ingredients;
+            document.getElementById('stat-1').innerText = data.stats[0];
+            document.getElementById('stat-2').innerText = data.stats[1];
+            document.getElementById('stat-3').innerText = data.stats[2];
+
+            document.getElementById('product-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('product-modal').classList.add('hidden');
+        }
+
+        // 5. Chart.js Configurations
+        function initCharts() {
+            Chart.defaults.font.family = 'Plus Jakarta Sans';
+            
+            // Pie Chart (Demographics Supported)
+            new Chart(document.getElementById('macroChart').getContext('2d'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Orphans & Vulnerable', 'Street Children', 'Disability Support', 'Disadvantaged Community'],
+                    datasets: [{
+                        data: [45, 25, 15, 15],
+                        backgroundColor: ['#2C3E50', '#27AE60', '#F39C12', '#3498DB'],
+                        borderWidth: 0
+                    }]
+                },
+                options: { responsive: true, cutout: '65%', plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, font: {size: 10} } } } }
+            });
+
+            // Bar Chart (Community Impact Scale)
+            new Chart(document.getElementById('mineralChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: ['Children Housed', 'Pupils Educated', 'Vocational Learners', 'Daily Meals Dispersed'],
+                    datasets: [{
+                        data: [89, 180, 45, 267],
+                        backgroundColor: '#27AE60',
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: { y: { beginAtZero: true } }
+                }
+            });
+        }
+
+        // 6. Contact Form Handler
+        function handleContact(e) {
+            e.preventDefault();
+            alert("Thank you! Your inquiry has been submitted to Jedidiah Children's Mission. We are redirecting you to our Admin Desk on WhatsApp...");
+            window.open("https://wa.me/256750838511?text=Hello%20JCM%20Uganda,%20I%20have%20submitted%20an%20inquiry%20via%20your%20website.", "_blank");
+        }
+
+        // 7. Network Status Monitor
+        function initNetworkMonitor() {
+            const toast = document.getElementById('network-toast');
+            const content = document.getElementById('toast-content');
+            const icon = document.getElementById('toast-icon');
+            const text = document.getElementById('toast-text');
+
+            if (!toast || !content || !icon || !text) return;
+
+            let wentOffline = false;
+
+            function updateStatus() {
+                if (navigator.onLine) {
+                    if (wentOffline) {
+                        toast.classList.remove('hidden');
+                        content.className = "px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 text-xs font-bold uppercase tracking-wider text-white bg-jcm-emerald/95 border-jcm-emerald/20 transition-all duration-300 animate-bounce";
+                        icon.className = "fa-solid fa-circle-check text-jcm-gold text-sm";
+                        text.innerText = "Connection Restored! You are back online.";
+                        
+                        setTimeout(() => {
+                            if (navigator.onLine) {
+                                toast.classList.add('hidden');
+                            }
+                        }, 3500);
+                        wentOffline = false;
+                    } else {
+                        toast.classList.add('hidden');
+                    }
+                } else {
+                    wentOffline = true;
+                    toast.classList.remove('hidden');
+                    content.className = "px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 text-xs font-bold uppercase tracking-wider text-white bg-jcm-accent/95 border-jcm-accent/20 transition-all duration-300";
+                    icon.className = "fa-solid fa-wifi-slash text-white text-sm";
+                    text.innerText = "Internet connection lost. Working offline.";
+                }
+            }
+
+            window.addEventListener('online', updateStatus);
+            window.addEventListener('offline', updateStatus);
+
+            if (!navigator.onLine) {
+                updateStatus();
+            }
+        }
+
+        // Initialize Application
+        window.addEventListener('DOMContentLoaded', () => {
+            renderMissionCarousel();
+            renderProgramsGrid();
+            initNetworkMonitor();
+        });
+    </script>
+</body>
+</html>
