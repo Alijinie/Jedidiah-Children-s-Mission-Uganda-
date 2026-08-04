@@ -231,49 +231,58 @@
 
             <!-- PARTNERSHIP ENQUIRY FORM SECTION -->
             <div class="glass-card rounded-3xl p-8 sm:p-12 border border-jcm-navy/10 relative overflow-hidden bg-gradient-to-b from-white to-jcm-cream">
-                <div class="max-w-2xl mx-auto text-center space-y-4 mb-8">
-                    <h2 class="text-3xl font-serif font-extrabold text-jcm-navy">Join Us in Making a Difference</h2>
-                    <p class="text-sm text-slate-600">Connect with us to sponsor a child, find volunteer opportunities, or schedule a visit.</p>
-                </div>
+    <div class="max-w-2xl mx-auto text-center space-y-4 mb-8">
+        <h2 class="text-3xl font-serif font-extrabold text-jcm-navy">Join Us in Making a Difference</h2>
+        <p class="text-sm text-slate-600">Connect with us to sponsor a child, find volunteer opportunities, or schedule a visit.</p>
+    </div>
 
-                <form id="contactForm" onsubmit="handleContact(event)" class="max-w-xl mx-auto space-y-4">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-[11px] font-bold uppercase tracking-wider text-jcm-navy mb-1">Full Name *</label>
-                            <input type="text" required placeholder="e.g. Sarah Jenkins" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-jcm-emerald text-sm bg-white">
-                        </div>
-                        <div>
-                            <label class="block text-[11px] font-bold uppercase tracking-wider text-jcm-navy mb-1">Phone / WhatsApp Number</label>
-                            <input type="tel" placeholder="+1 555-019-2834" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-jcm-emerald text-sm bg-white">
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-[11px] font-bold uppercase tracking-wider text-jcm-navy mb-1">Email Address *</label>
-                            <input type="email" required placeholder="e.g. sarah@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-jcm-emerald text-sm bg-white">
-                        </div>
-                        <div>
-                            <label class="block text-[11px] font-bold uppercase tracking-wider text-jcm-navy mb-1">Inquiry Purpose</label>
-                            <select class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-jcm-emerald text-sm bg-white font-medium text-slate-700">
-                                <option>Child Sponsorship</option>
-                                <option>Volunteer Opportunities</option>
-                                <option>Donation Program Details</option>
-                                <option>Partnership & Mentorship</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-[11px] font-bold uppercase tracking-wider text-jcm-navy mb-1">Your message or questions?</label>
-                        <textarea rows="3" placeholder="Tell us how you would like to collaborate or support our operations..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-jcm-emerald text-sm bg-white"></textarea>
-                    </div>
-
-                    <button type="submit" class="w-full bg-jcm-navy hover:bg-jcm-emerald text-jcm-gold font-extrabold py-4 rounded-xl shadow-lg transition-all text-sm uppercase tracking-widest">
-                        Send Message
-                    </button>
-                </form>
+    <form id="contactForm" onsubmit="handleContact(event)" class="max-w-xl mx-auto space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+                <label class="block text-[11px] font-bold uppercase tracking-wider text-jcm-navy mb-1">Full Name *</label>
+                <!-- Added id="nameInput" -->
+                <input type="text" id="nameInput" required placeholder="e.g. Sarah Jenkins" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-jcm-emerald text-sm bg-white">
             </div>
+            <div>
+                <label class="block text-[11px] font-bold uppercase tracking-wider text-jcm-navy mb-1">Phone / WhatsApp Number</label>
+                <!-- Added id="phoneInput" -->
+                <input type="tel" id="phoneInput" placeholder="+1 555-019-2834" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-jcm-emerald text-sm bg-white">
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+                <label class="block text-[11px] font-bold uppercase tracking-wider text-jcm-navy mb-1">Email Address *</label>
+                <!-- Added id="emailInput" -->
+                <input type="email" id="emailInput" required placeholder="e.g. sarah@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-jcm-emerald text-sm bg-white">
+            </div>
+            <div>
+                <label class="block text-[11px] font-bold uppercase tracking-wider text-jcm-navy mb-1">Inquiry Purpose</label>
+                <!-- Added id="purposeInput" -->
+                <select id="purposeInput" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-jcm-emerald text-sm bg-white font-medium text-slate-700">
+                    <option>Child Sponsorship</option>
+                    <option>Volunteer Opportunities</option>
+                    <option>Donation Program Details</option>
+                    <option>Partnership & Mentorship</option>
+                </select>
+            </div>
+        </div>
+
+        <div>
+            <label class="block text-[11px] font-bold uppercase tracking-wider text-jcm-navy mb-1">Your message or questions?</label>
+            <!-- Added id="messageInput" -->
+            <textarea id="messageInput" rows="3" placeholder="Tell us how you would like to collaborate or support our operations..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-jcm-emerald text-sm bg-white"></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-jcm-navy hover:bg-jcm-emerald text-jcm-gold font-extrabold py-4 rounded-xl shadow-lg transition-all text-sm uppercase tracking-widest">
+            Send Message
+        </button>
+    </form>
+</div>
+
+
+
+
         </section>
 
         <!-- ================= TAB 2: PROGRAMS ================= -->
@@ -816,10 +825,31 @@
         }
 
         // 6. Contact Form Handler
-        function handleContact(e) {
-            e.preventDefault();
-            alert("Thank you! Your inquiry has been submitted to Jedidiah Children's Mission. We are redirecting you to our Admin Desk on WhatsApp...");
-            window.open("https://wa.me/256750838511?text=Hello%20JCM%20Uganda,%20I%20have%20submitted%20an%20inquiry%20via%20your%20website.", "_blank");
+        function handleContact(event) {
+    // Prevent the default form submission behavior (page reload)
+    event.preventDefault(); 
+
+    // Retrieve values from the form inputs
+    const name = document.getElementById('nameInput').value;
+    const phone = document.getElementById('phoneInput').value || 'Not provided';
+    const email = document.getElementById('emailInput').value;
+    const purpose = document.getElementById('purposeInput').value;
+    const message = document.getElementById('messageInput').value || 'No additional message.';
+
+    // Construct the email subject
+    const subject = encodeURIComponent(`New Inquiry: ${purpose} from ${name}`);
+    
+    // Construct the email body, properly encoding line breaks and special characters
+    const body = encodeURIComponent(
+        `Name: ${name}\n` +
+        `Phone/WhatsApp: ${phone}\n` +
+        `Email: ${email}\n` +
+        `Inquiry Purpose: ${purpose}\n\n` +
+        `Message:\n${message}`
+    );
+
+    // Trigger the default email client with the mailto protocol
+    window.location.href = `mailto:piuskabiswa@gmail.com?subject=${subject}&body=${body}`;
         }
 
         // 7. Network Status Monitor
