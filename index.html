@@ -313,17 +313,75 @@
 
         </section>
 
-        <!-- ================= TAB 2: PROGRAMS ================= -->
-        <section id="view-programs" class="hidden space-y-8 fade-up">
-            <div class="glass-card rounded-3xl p-8 border-l-8 border-l-jcm-emerald">
-                <h2 class="text-3xl font-serif font-extrabold text-jcm-navy">Our Mission Programs</h2>
-                <p class="text-sm text-jcm-navy mt-1">Select any initiative below to view our focus areas, daily routines, and program requirements.</p>
-            </div>
+    <!-- ================= TAB 2: PROGRAMS ================= -->
+<section id="view-programs" class="hidden space-y-8 fade-up">
+    <!-- Header Card -->
+    <div class="glass-card rounded-3xl p-8 border-l-8 border-l-jcm-emerald">
+        <h2 class="text-3xl font-serif font-extrabold text-jcm-navy">Our Mission Programs</h2>
+        <p class="text-sm text-jcm-navy mt-1">Select any initiative below to view our focus areas, daily routines, and program requirements.</p>
+    </div>
 
-            <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6" id="programs-grid-container">
-                <!-- Dynamically Populated via JS -->
+    <!-- Programs Grid -->
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6" id="programs-grid-container">
+        <!-- Dynamically Populated via JS -->
+    </div>
+
+    <!-- Challenges & Bottlenecks Section -->
+    <div class="glass-card rounded-3xl p-8 border-l-8 border-l-rose-500 bg-white/40 backdrop-blur-sm">
+        <div class="mb-6">
+            <h3 class="text-2xl font-serif font-bold text-jcm-navy">Challenges & Bottlenecks</h3>
+            <p class="text-sm text-jcm-navy mt-1 opacity-80">Current operational hurdles we are actively working to overcome.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Bottleneck 1 -->
+            <div class="p-4 rounded-2xl bg-white/50 shadow-sm border border-white/20">
+                <h4 class="font-bold text-jcm-navy flex items-center gap-2 mb-2">
+                    <svg class="w-5 h-5 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    Resource Allocation
+                </h4>
+                <p class="text-sm text-gray-700 leading-relaxed mb-3">Balancing limited resources across multiple growing initiatives requires careful logistical planning and strict prioritization.</p>
+                <ul class="text-xs text-gray-700 space-y-2 list-none">
+                    <li class="flex items-start gap-2">
+                        <span class="text-rose-400 mt-0.5">•</span>
+                        <span><strong>Volunteer Coordination:</strong> Matching specialized skill sets with dynamic daily program schedules.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-rose-400 mt-0.5">•</span>
+                        <span><strong>Supply Chain Variables:</strong> Overcoming procurement delays for essential physical materials and outreach kits.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-rose-400 mt-0.5">•</span>
+                        <span><strong>Funding Distribution:</strong> Maintaining equitable budget allocation across diverse, concurrent field projects.</span>
+                    </li>
+                </ul>
             </div>
-        </section>
+            
+            <!-- Bottleneck 2 -->
+            <div class="p-4 rounded-2xl bg-white/50 shadow-sm border border-white/20">
+                <h4 class="font-bold text-jcm-navy flex items-center gap-2 mb-2">
+                    <svg class="w-5 h-5 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    Operational Scaling
+                </h4>
+                <p class="text-sm text-gray-700 leading-relaxed mb-3">As community participation expands, maintaining the same level of personalized impact and support becomes increasingly complex.</p>
+                <ul class="text-xs text-gray-700 space-y-2 list-none">
+                    <li class="flex items-start gap-2">
+                        <span class="text-rose-400 mt-0.5">•</span>
+                        <span><strong>Data Management:</strong> Transitioning from manual tracking to automated databases without losing historical records.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-rose-400 mt-0.5">•</span>
+                        <span><strong>Onboarding Overhead:</strong> Streamlining the integration process and orientation for influxes of new members.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-rose-400 mt-0.5">•</span>
+                        <span><strong>Quality Assurance:</strong> Ensuring the core standard of support remains intact as our physical footprint expands.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- ================= TAB 3: OUR IMPACT ================= -->
         <section id="view-impact" class="hidden space-y-12 fade-up">
