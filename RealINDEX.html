@@ -126,12 +126,12 @@
                 <button onclick="switchView('programs')" id="d-nav-programs" class="hover:text-jcm-emerald transition-colors">Our Programs</button>
                 <button onclick="switchView('impact')" id="d-nav-impact" class="hover:text-jcm-emerald transition-colors">Our Impact</button>
                 <button onclick="switchView('leadership')" id="d-nav-leadership" class="hover:text-jcm-emerald transition-colors">Leadership Desk</button>
-                <button onclick="switchView('donations')" id="d-nav-donations" class="hover:text-jcm-emerald transition-colors">Donations</button>
                 
-                <button onclick="switchView('donations')" class="bg-jcm-emerald hover:bg-jcm-navy text-white px-6 py-2.5 rounded-full transition-all shadow-lg shadow-jcm-emerald/20 flex items-center gap-2 text-xs font-extrabold">
+                <!-- Donation Link: Replace '#' with your actual donation URL -->
+                <a href="YOUR_DONATION_PAGE_LINK_HERE" class="bg-jcm-emerald hover:bg-jcm-navy text-white px-6 py-2.5 rounded-full transition-all shadow-lg shadow-jcm-emerald/20 flex items-center gap-2 text-xs font-extrabold">
                     <span class="w-2 h-2 rounded-full bg-jcm-gold animate-ping"></span>
                     <span>Support Our Mission</span>
-                </button>
+                </a>
             </div>
         </div>
     </header>
@@ -161,10 +161,11 @@
                     </p>
                     
                     <div class="pt-2 flex flex-wrap gap-4 items-center">
-                        <button onclick="switchView('donations')" class="bg-jcm-gold text-jcm-navy px-8 py-3.5 rounded-xl font-bold text-sm hover:bg-yellow-400 transition-all shadow-xl shadow-jcm-gold/10 flex items-center gap-3">
+                        <!-- Donation Link: Replace '#' with your actual donation URL -->
+                        <a href="YOUR_DONATION_PAGE_LINK_HERE" class="bg-jcm-gold text-jcm-navy px-8 py-3.5 rounded-xl font-bold text-sm hover:bg-yellow-400 transition-all shadow-xl shadow-jcm-gold/10 flex items-center gap-3">
                             <i class="fa-solid fa-hand-holding-heart text-lg"></i>
                             <span>Sponsor a Child Today</span>
-                        </button>
+                        </a>
                         <button onclick="switchView('programs')" class="px-6 py-3.5 rounded-xl font-bold text-sm bg-white/10 hover:bg-white/20 border border-white/15 transition-all text-white">
                             View Our Programs
                         </button>
@@ -638,101 +639,16 @@
                     Although we provide compassionate care at zero cost to all of our beneficiaries, Your sponsorship goes a long way to ensure that safe shelter, nutritious meals, primary education, and clean facilities are within reach of the most vulnerable and impoverished kids and teens in Nyendo, and greater Masaka.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <button onclick="switchView('donations')" class="inline-flex items-center gap-2 bg-jcm-emerald text-white px-8 py-3.5 rounded-full text-xs font-black hover:bg-jcm-navy transition-all shadow-md">
+                    <!-- Donation Link: Replace 'YOUR_DONATION_PAGE_LINK_HERE' with your real checkout or donation processor page -->
+                    <a href="YOUR_DONATION_PAGE_LINK_HERE" class="inline-flex items-center gap-2 bg-jcm-emerald text-white px-8 py-3.5 rounded-full text-xs font-black hover:bg-jcm-navy transition-all shadow-md">
                         <i class="fa-solid fa-heart"></i> MAKE A DONATION ONLINE
-                    </button>
+                    </a>
                     <a href="https://wa.me/256750838511?text=Hello%20JCM%20Uganda,%20I%20would%20like%20to%20know%20more%20about%20child%20sponsorship." target="_blank" class="inline-flex items-center gap-2 bg-jcm-navy text-white px-6 py-3.5 rounded-full text-xs font-bold hover:bg-slate-700 transition-all">
                         <i class="fa-brands fa-whatsapp text-emerald-400"></i> Inquiry on WhatsApp
                     </a>
                 </div>
             </div>
         </section>
-
-        <!-- ================= TAB 5: DONATIONS ================= -->
-        <section id="view-donations" class="hidden space-y-12 fade-up">
-            <div class="text-center max-w-2xl mx-auto space-y-3">
-                <span class="text-jcm-navy text-xs font-black tracking-widest uppercase">Support The Mission</span>
-                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-jcm-navy">Make a Lasting Impact</h2>
-                <p class="text-sm text-jcm-navy">Choose a convenient payment method below. Your generous contributions directly provide shelter, healthcare, and education for our vulnerable children.</p>
-            </div>
-
-            <!-- Donation Options Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <!-- PayPal Card -->
-                <div class="glass-card p-6 rounded-3xl border-t-4 border-t-[#00457C] text-center flex flex-col justify-between space-y-4 shadow-sm hover:shadow-lg transition-shadow">
-                    <div class="space-y-3">
-                        <div class="w-16 h-16 mx-auto bg-slate-50 rounded-full flex items-center justify-center text-3xl">
-                            <i class="fa-brands fa-paypal text-[#00457C]"></i>
-                        </div>
-                        <h3 class="font-bold text-lg text-jcm-navy">PayPal</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">Quick, secure, and internationally recognized transactions from anywhere in the world.</p>
-                    </div>
-                    <a href="REPLACE_WITH_PAYPAL_LINK" class="inline-flex items-center justify-center gap-2 w-full bg-slate-100 text-slate-500 py-3 rounded-xl text-xs font-black uppercase tracking-wider border border-slate-200 hover:bg-slate-200 transition-colors">
-                        <i class="fa-solid fa-clock-rotate-left"></i> Coming Soon
-                    </a>
-                </div>
-
-                <!-- Go Fund Me Card -->
-                <div class="glass-card p-6 rounded-3xl border-t-4 border-t-[#00B964] text-center flex flex-col justify-between space-y-4 shadow-sm hover:shadow-lg transition-shadow">
-                    <div class="space-y-3">
-                        <div class="w-16 h-16 mx-auto bg-slate-50 rounded-full flex items-center justify-center text-3xl font-black text-[#00B964]">
-                            gfM
-                        </div>
-                        <h3 class="font-bold text-lg text-jcm-navy">Go Fund Me</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">Support our specific community outreach campaigns and fundraising goals directly.</p>
-                    </div>
-                    <a href="REPLACE_WITH_GOFUNDME_LINK" class="inline-flex items-center justify-center gap-2 w-full bg-slate-100 text-slate-500 py-3 rounded-xl text-xs font-black uppercase tracking-wider border border-slate-200 hover:bg-slate-200 transition-colors">
-                        <i class="fa-solid fa-clock-rotate-left"></i> Coming Soon
-                    </a>
-                </div>
-
-                <!-- Wire Transfer Card -->
-                <div class="glass-card p-6 rounded-3xl border-t-4 border-t-jcm-gold text-center flex flex-col justify-between space-y-4 shadow-sm hover:shadow-lg transition-shadow">
-                    <div class="space-y-3">
-                        <div class="w-16 h-16 mx-auto bg-slate-50 rounded-full flex items-center justify-center text-3xl">
-                            <i class="fa-solid fa-building-columns text-jcm-gold"></i>
-                        </div>
-                        <h3 class="font-bold text-lg text-jcm-navy">Bank Wire Transfer</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">Send a direct deposit straight to the official Jedidiah Children's Mission account.</p>
-                    </div>
-                    <a href="REPLACE_WITH_WIRE_TRANSFER_INFO" class="inline-flex items-center justify-center gap-2 w-full bg-slate-100 text-slate-500 py-3 rounded-xl text-xs font-black uppercase tracking-wider border border-slate-200 hover:bg-slate-200 transition-colors">
-                        <i class="fa-solid fa-clock-rotate-left"></i> Coming Soon
-                    </a>
-                </div>
-
-                <!-- Credit/Debit Card Card -->
-                <div class="glass-card p-6 rounded-3xl border-t-4 border-t-[#1A1F71] text-center flex flex-col justify-between space-y-4 shadow-sm hover:shadow-lg transition-shadow">
-                    <div class="space-y-3">
-                        <div class="w-16 h-16 mx-auto bg-slate-50 rounded-full flex items-center justify-center gap-2 text-2xl">
-                            <i class="fa-brands fa-cc-visa text-[#1A1F71]"></i>
-                            <i class="fa-brands fa-cc-mastercard text-[#EB001B]"></i>
-                        </div>
-                        <h3 class="font-bold text-lg text-jcm-navy">Credit & Debit Cards</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">Securely process payments via Safe Visa, MasterCard, and Verve card gateways.</p>
-                    </div>
-                    <a href="REPLACE_WITH_CARD_CHECKOUT_LINK" class="inline-flex items-center justify-center gap-2 w-full bg-slate-100 text-slate-500 py-3 rounded-xl text-xs font-black uppercase tracking-wider border border-slate-200 hover:bg-slate-200 transition-colors">
-                        <i class="fa-solid fa-clock-rotate-left"></i> Coming Soon
-                    </a>
-                </div>
-
-                <!-- Mobile Money Card -->
-                <div class="glass-card p-6 rounded-3xl border-t-4 border-t-jcm-emerald text-center flex flex-col justify-between space-y-4 shadow-sm hover:shadow-lg transition-shadow">
-                    <div class="space-y-3">
-                        <div class="w-16 h-16 mx-auto bg-slate-50 rounded-full flex items-center justify-center text-3xl">
-                            <i class="fa-solid fa-mobile-screen-button text-jcm-emerald"></i>
-                        </div>
-                        <h3 class="font-bold text-lg text-jcm-navy">Mobile Money</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">A highly convenient Pesa Pal checkout designed for our local and regional supporters.</p>
-                    </div>
-                    <a href="REPLACE_WITH_PESAPAL_LINK" class="inline-flex items-center justify-center gap-2 w-full bg-slate-100 text-slate-500 py-3 rounded-xl text-xs font-black uppercase tracking-wider border border-slate-200 hover:bg-slate-200 transition-colors">
-                        <i class="fa-solid fa-clock-rotate-left"></i> Coming Soon
-                    </a>
-                </div>
-
-            </div>
-        </section>
-
     </main>
 
     <!-- FOOTER -->
@@ -758,7 +674,6 @@
                     <li><button onclick="switchView('programs')" class="hover:text-white">Programs & Services</button></li>
                     <li><button onclick="switchView('impact')" class="hover:text-white">Our Impact</button></li>
                     <li><button onclick="switchView('leadership')" class="hover:text-white">Our Leadership</button></li>
-                    <li><button onclick="switchView('donations')" class="hover:text-white">Donations & Support</button></li>
                 </ul>
             </div>
 
@@ -798,11 +713,11 @@
                 <i class="fa-solid fa-user-tie text-base"></i>
                 <span class="text-[9px] mt-1 font-bold">Leaders</span>
             </button>
-            
-            <button onclick="switchView('donations')" id="m-nav-donations" class="flex flex-col items-center text-slate-400 hover:text-white w-12 pl-1 border-l border-white/15">
+            <!-- Donation Link: Replace '#' with your actual donation URL -->
+            <a href="YOUR_DONATION_PAGE_LINK_HERE" class="flex flex-col items-center text-jcm-gold w-12 pl-1 border-l border-white/15">
                 <i class="fa-solid fa-heart text-xl animate-pulse"></i>
                 <span class="text-[8px] mt-0.5 font-bold text-white">Donate</span>
-            </button>
+            </a>
         </div>
     </nav>
 
@@ -846,9 +761,10 @@
                     <p id="modal-ingredients" class="text-xs text-jcm-navy font-bold bg-jcm-cream p-3 rounded-xl border border-jcm-navy/5"></p>
                 </div>
 
-                <button onclick="switchView('donations'); closeModal();" class="w-full mt-4 bg-[#27AE60] hover:bg-emerald-600 text-white font-extrabold py-3.5 rounded-xl flex items-center justify-center gap-2 text-xs uppercase tracking-wider shadow-lg shadow-green-500/10">
+                <!-- Donation Link: Replace '#' with your actual donation URL -->
+                <a href="YOUR_DONATION_PAGE_LINK_HERE" class="w-full mt-4 bg-[#27AE60] hover:bg-emerald-600 text-white font-extrabold py-3.5 rounded-xl flex items-center justify-center gap-2 text-xs uppercase tracking-wider shadow-lg shadow-green-500/10">
                     <i class="fa-solid fa-heart"></i> Support This Initiative
-                </button>
+                </a>
             </div>
         </div>
     </div>
@@ -983,7 +899,7 @@
 
         // 3. Tab Navigation Router
         function switchView(viewId) {
-            const views = ['home', 'programs', 'impact', 'leadership', 'donations'];
+            const views = ['home', 'programs', 'impact', 'leadership'];
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
             views.forEach(v => {
@@ -994,12 +910,7 @@
                 if(v === viewId) {
                     el?.classList.remove('hidden');
                     if(dBtn) dBtn.className = "text-jcm-emerald font-extrabold transition-colors border-b-2 border-jcm-emerald pb-0.5";
-                    
-                    if(mBtn && v !== 'donations') {
-                        mBtn.className = "flex flex-col items-center text-jcm-gold w-14 scale-105 transition-transform";
-                    } else if (mBtn && v === 'donations') {
-                        mBtn.className = "flex flex-col items-center text-jcm-gold w-12 pl-1 border-l border-white/15 scale-105 transition-transform";
-                    }
+                    if(mBtn) mBtn.className = "flex flex-col items-center text-jcm-gold w-14 scale-105 transition-transform";
                     
                     // Lazy initialize charts when "Our Impact" tab opens
                     if(v === 'impact' && !window.chartsInitialized) {
@@ -1009,12 +920,7 @@
                 } else {
                     el?.classList.add('hidden');
                     if(dBtn) dBtn.className = "hover:text-jcm-emerald transition-colors font-bold text-jcm-navy/70";
-                    
-                    if(mBtn && v !== 'donations') {
-                        mBtn.className = "flex flex-col items-center text-slate-400 hover:text-white w-14";
-                    } else if (mBtn && v === 'donations') {
-                        mBtn.className = "flex flex-col items-center text-slate-400 hover:text-white w-12 pl-1 border-l border-white/15";
-                    }
+                    if(mBtn) mBtn.className = "flex flex-col items-center text-slate-400 hover:text-white w-14";
                 }
             });
         }
@@ -1081,30 +987,30 @@
 
         // 6. Contact Form Handler
         function handleContact(event) {
-            // Prevent the default form submission behavior (page reload)
-            event.preventDefault(); 
+    // Prevent the default form submission behavior (page reload)
+    event.preventDefault(); 
 
-            // Retrieve values from the form inputs
-            const name = document.getElementById('nameInput').value;
-            const phone = document.getElementById('phoneInput').value || 'Not provided';
-            const email = document.getElementById('emailInput').value;
-            const purpose = document.getElementById('purposeInput').value;
-            const message = document.getElementById('messageInput').value || 'No additional message.';
+    // Retrieve values from the form inputs
+    const name = document.getElementById('nameInput').value;
+    const phone = document.getElementById('phoneInput').value || 'Not provided';
+    const email = document.getElementById('emailInput').value;
+    const purpose = document.getElementById('purposeInput').value;
+    const message = document.getElementById('messageInput').value || 'No additional message.';
 
-            // Construct the email subject
-            const subject = encodeURIComponent(`New Inquiry: ${purpose} from ${name}`);
-            
-            // Construct the email body, properly encoding line breaks and special characters
-            const body = encodeURIComponent(
-                `Name: ${name}\n` +
-                `Phone/WhatsApp: ${phone}\n` +
-                `Email: ${email}\n` +
-                `Inquiry Purpose: ${purpose}\n\n` +
-                `Message:\n${message}`
-            );
+    // Construct the email subject
+    const subject = encodeURIComponent(`New Inquiry: ${purpose} from ${name}`);
+    
+    // Construct the email body, properly encoding line breaks and special characters
+    const body = encodeURIComponent(
+        `Name: ${name}\n` +
+        `Phone/WhatsApp: ${phone}\n` +
+        `Email: ${email}\n` +
+        `Inquiry Purpose: ${purpose}\n\n` +
+        `Message:\n${message}`
+    );
 
-            // Trigger the default email client with the mailto protocol
-            window.location.href = `mailto:piuskabiswa@gmail.com?subject=${subject}&body=${body}`;
+    // Trigger the default email client with the mailto protocol
+    window.location.href = `mailto:piuskabiswa@gmail.com?subject=${subject}&body=${body}`;
         }
 
         // 7. Network Status Monitor
