@@ -94,23 +94,6 @@
         .carousel-track:hover {
             animation-play-state: paused;
         }
-
-        /* === Enhancement utilities (layout-safe) === */
-        .accordion-body { display: none; }
-        .accordion-item.open .accordion-body { display: block; animation: fadeUp .35s ease forwards; }
-        .accordion-item.open .accordion-chevron { transform: rotate(180deg); }
-        .accordion-chevron { transition: transform .3s ease; }
-        .filter-btn.active { background: #2C3E50; color: #F39C12; border-color: #2C3E50; }
-        .tier-card.selected { ring: 2px; border-color: #27AE60 !important; box-shadow: 0 16px 40px rgba(39,174,96,.18); transform: translateY(-4px); }
-        .animate-bar { transition: width 1.2s cubic-bezier(.16,1,.3,1); }
-        .testi-track { transition: transform .5s cubic-bezier(.16,1,.3,1); }
-        #lightbox { backdrop-filter: blur(8px); }
-        #back-to-top { transition: opacity .3s, transform .3s; opacity: 0; pointer-events: none; transform: translateY(12px); }
-        #back-to-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
-        .tab-dot { transition: all .3s; }
-        details > summary { list-style: none; cursor: pointer; }
-        details > summary::-webkit-details-marker { display: none; }
-        input[type="range"] { accent-color: #27AE60; }
     </style>
 </head>
 
@@ -245,41 +228,6 @@
                 </div>
             </div>
             
-            <!-- LIVE IMPACT COUNTERS -->
-            <div class="glass-card rounded-3xl p-6 sm:p-8 grid grid-cols-2 lg:grid-cols-4 gap-6 text-center border border-jcm-navy/10">
-                <div><div class="text-3xl font-black text-jcm-navy"><span class="counter" data-target="183">0</span>+</div><p class="text-[11px] font-bold uppercase tracking-wider text-slate-500 mt-1">Children Supported Daily</p></div>
-                <div><div class="text-3xl font-black text-jcm-emerald"><span class="counter" data-target="89">0</span></div><p class="text-[11px] font-bold uppercase tracking-wider text-slate-500 mt-1">Resident Orphans Housed</p></div>
-                <div><div class="text-3xl font-black text-jcm-gold"><span class="counter" data-target="180">0</span>+</div><p class="text-[11px] font-bold uppercase tracking-wider text-slate-500 mt-1">Pupils in Study Center</p></div>
-                <div><div class="text-3xl font-black text-jcm-sky"><span class="counter" data-target="9">0</span></div><p class="text-[11px] font-bold uppercase tracking-wider text-slate-500 mt-1">Years of Service (since 2017)</p></div>
-                <p class="col-span-2 lg:col-span-4 text-[11px] text-slate-400 italic">Numbers animate as you scroll — a living snapshot of Nyendo & greater Masaka.</p>
-            </div>
-
-            <!-- MISSION / VISION / VALUES -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-jcm-navy text-white p-6 rounded-2xl space-y-3 shadow-lg">
-                    <div class="w-10 h-10 rounded-xl bg-jcm-gold/20 text-jcm-gold flex items-center justify-center"><i class="fa-solid fa-bullseye"></i></div>
-                    <h3 class="font-serif font-bold text-lg">Our Mission</h3>
-                    <p class="text-xs text-slate-300 leading-relaxed">To rescue, shelter, educate and disciple vulnerable children — orphans, street children and children with disabilities — into self-reliant, God-fearing citizens.</p>
-                    <button onclick="switchView('impact')" class="text-[11px] font-bold text-jcm-gold hover:underline">See how we measure it →</button>
-                </div>
-                <div class="bg-white p-6 rounded-2xl space-y-3 border border-slate-100 shadow-sm">
-                    <div class="w-10 h-10 rounded-xl bg-jcm-emerald/10 text-jcm-emerald flex items-center justify-center"><i class="fa-solid fa-eye"></i></div>
-                    <h3 class="font-bold text-lg text-jcm-navy">Our Vision</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">A Uganda where every vulnerable child has a safe home, quality education, a marketable skill and a caring community to belong to.</p>
-                    <button onclick="switchView('programs')" class="text-[11px] font-bold text-jcm-emerald hover:underline">Explore programs →</button>
-                </div>
-                <div class="bg-white p-6 rounded-2xl space-y-3 border border-slate-100 shadow-sm">
-                    <div class="w-10 h-10 rounded-xl bg-jcm-sky/10 text-jcm-sky flex items-center justify-center"><i class="fa-solid fa-heart-circle-check"></i></div>
-                    <h3 class="font-bold text-lg text-jcm-navy">Our Values</h3>
-                    <ul class="text-xs text-slate-500 space-y-1.5 font-medium">
-                        <li><i class="fa-solid fa-check text-jcm-emerald mr-1"></i> Compassion first, accountability always</li>
-                        <li><i class="fa-solid fa-check text-jcm-emerald mr-1"></i> Faith-rooted character & discipline</li>
-                        <li><i class="fa-solid fa-check text-jcm-emerald mr-1"></i> Education + practical self-reliance</li>
-                        <li><i class="fa-solid fa-check text-jcm-emerald mr-1"></i> Family-style care, zero-cost to child</li>
-                    </ul>
-                </div>
-            </div>
-            
             <!-- VOLUNTEER & INTERNSHIP OPPORTUNITIES -->
             <div class="space-y-6">
                 <div class="flex justify-between items-center border-b border-jcm-navy/10 pb-4">
@@ -305,48 +253,6 @@
 </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- A DAY AT JCM TIMELINE -->
-            <div class="space-y-6">
-                <div class="flex justify-between items-center border-b border-jcm-navy/10 pb-4">
-                    <h2 class="text-2xl font-serif font-bold text-jcm-navy">A Day in the Life at JCM</h2>
-                    <span class="text-[11px] font-bold uppercase tracking-wider text-jcm-emerald bg-jcm-emerald/10 px-3 py-1 rounded-full">Mon – Sat Routine</span>
-                </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm space-y-2 hover:-translate-y-1 transition-transform"><div class="text-jcm-gold font-black text-xs">6:30 AM</div><h4 class="font-bold text-sm text-jcm-navy"><i class="fa-solid fa-sun mr-1"></i>Devotion & Chores</h4><p class="text-[11px] text-slate-500">Morning fellowship, hygiene, dorm clean-up and breakfast together as family.</p></div>
-                    <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm space-y-2 hover:-translate-y-1 transition-transform"><div class="text-jcm-emerald font-black text-xs">8:00 AM – 1:00 PM</div><h4 class="font-bold text-sm text-jcm-navy"><i class="fa-solid fa-book-open mr-1"></i>Study Center Classes</h4><p class="text-[11px] text-slate-500">Preschool to middle-school lessons, textbooks provided, continuous assessments.</p></div>
-                    <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm space-y-2 hover:-translate-y-1 transition-transform"><div class="text-jcm-sky font-black text-xs">2:00 – 5:00 PM</div><h4 class="font-bold text-sm text-jcm-navy"><i class="fa-solid fa-scissors mr-1"></i>Vocational & Farm Labs</h4><p class="text-[11px] text-slate-500">Tailoring, hairdressing, catering, music/studio and hands-on farm practice.</p></div>
-                    <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm space-y-2 hover:-translate-y-1 transition-transform"><div class="text-purple-600 font-black text-xs">EVENING</div><h4 class="font-bold text-sm text-jcm-navy"><i class="fa-solid fa-moon mr-1"></i>Mentorship & Rest</h4><p class="text-[11px] text-slate-500">Balanced dinner, counselling, character seminars and supervised rest.</p></div>
-                </div>
-            </div>
-
-            <!-- TESTIMONIALS SLIDER -->
-            <div class="glass-card rounded-3xl p-6 sm:p-10 space-y-6 border border-jcm-navy/10 overflow-hidden">
-                <div class="flex justify-between items-center">
-                    <div><span class="text-[11px] font-black uppercase tracking-widest text-jcm-gold">Voices of Hope</span><h2 class="text-2xl font-serif font-bold text-jcm-navy">Stories From Our Community</h2></div>
-                    <div class="flex gap-2">
-                        <button onclick="moveTesti(-1)" class="w-9 h-9 rounded-full bg-jcm-navy text-white flex items-center justify-center hover:bg-jcm-emerald"><i class="fa-solid fa-chevron-left text-xs"></i></button>
-                        <button onclick="moveTesti(1)" class="w-9 h-9 rounded-full bg-jcm-navy text-white flex items-center justify-center hover:bg-jcm-emerald"><i class="fa-solid fa-chevron-right text-xs"></i></button>
-                    </div>
-                </div>
-                <div class="overflow-hidden"><div id="testi-track" class="testi-track flex gap-4">
-                    <div class="min-w-full sm:min-w-[48%] bg-white rounded-2xl p-6 border border-slate-100 space-y-3"><div class="text-jcm-gold text-sm">★★★★★</div><p class="text-xs text-slate-600 italic leading-relaxed">"JCM gave my children free schooling when I could not afford fees. Now they read, write and dream of becoming teachers."</p><p class="text-xs font-bold text-jcm-navy">— Parent, Nyendo <span class="font-normal text-slate-400">• Study Center</span></p></div>
-                    <div class="min-w-full sm:min-w-[48%] bg-white rounded-2xl p-6 border border-slate-100 space-y-3"><div class="text-jcm-gold text-sm">★★★★★</div><p class="text-xs text-slate-600 italic leading-relaxed">"I joined tailoring at 16 with no prior schooling. Today I sew uniforms for neighbours and save for my own machine."</p><p class="text-xs font-bold text-jcm-navy">— Vocational Graduate <span class="font-normal text-slate-400">• Age 17</span></p></div>
-                    <div class="min-w-full sm:min-w-[48%] bg-white rounded-2xl p-6 border border-slate-100 space-y-3"><div class="text-jcm-gold text-sm">★★★★★</div><p class="text-xs text-slate-600 italic leading-relaxed">"Volunteering here changed me. The children are disciplined, joyful and hungry to learn. I teach, I mentor, I belong."</p><p class="text-xs font-bold text-jcm-navy">— JCM Volunteer <span class="font-normal text-slate-400">• Masaka</span></p></div>
-                </div></div>
-                <div class="flex justify-center gap-2" id="testi-dots"><span class="tab-dot w-2 h-2 rounded-full bg-jcm-emerald"></span><span class="tab-dot w-2 h-2 rounded-full bg-slate-300"></span><span class="tab-dot w-2 h-2 rounded-full bg-slate-300"></span></div>
-            </div>
-
-            <!-- HOME FAQ ACCORDION -->
-            <div class="space-y-4">
-                <h2 class="text-2xl font-serif font-bold text-jcm-navy border-b border-jcm-navy/10 pb-4">Quick Answers for New Visitors</h2>
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div class="accordion-item bg-white rounded-2xl border border-slate-100 overflow-hidden"><button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-sm text-jcm-navy">Where is JCM located? <i class="fa-solid fa-chevron-down accordion-chevron text-jcm-emerald text-xs"></i></button><div class="accordion-body px-5 pb-5 text-xs text-slate-500 leading-relaxed">P.O. Box 41, Nyendo, Masaka, Uganda. Call/WhatsApp +256 750 838511 to plan a visit, Mon–Sat.</div></div>
-                    <div class="accordion-item bg-white rounded-2xl border border-slate-100 overflow-hidden"><button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-sm text-jcm-navy">Is care really free for children? <i class="fa-solid fa-chevron-down accordion-chevron text-jcm-emerald text-xs"></i></button><div class="accordion-body px-5 pb-5 text-xs text-slate-500 leading-relaxed">Yes. Shelter, meals, schooling and mentorship cost beneficiaries nothing — donors and sponsors cover it.</div></div>
-                    <div class="accordion-item bg-white rounded-2xl border border-slate-100 overflow-hidden"><button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-sm text-jcm-navy">Who can join the skills program? <i class="fa-solid fa-chevron-down accordion-chevron text-jcm-emerald text-xs"></i></button><div class="accordion-body px-5 pb-5 text-xs text-slate-500 leading-relaxed">Youth aged 13–18 in Masaka with no prior formal education. No academic background required — just commitment.</div></div>
-                    <div class="accordion-item bg-white rounded-2xl border border-slate-100 overflow-hidden"><button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-sm text-jcm-navy">How can I help today? <i class="fa-solid fa-chevron-down accordion-chevron text-jcm-emerald text-xs"></i></button><div class="accordion-body px-5 pb-5 text-xs text-slate-500 leading-relaxed">Sponsor a child, donate supplies, volunteer, or share our story. Use the form below or tap Support Our Mission.</div></div>
                 </div>
             </div>
 
@@ -415,22 +321,6 @@
     </div>
 
     <!-- Programs Grid -->
-    <div class="glass-card rounded-2xl p-4 flex flex-col md:flex-row gap-3 md:items-center">
-        <div class="relative flex-1">
-            <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
-            <input id="program-search" oninput="filterPrograms()" type="text" placeholder="Search programs: e.g. tailoring, farm, health..." class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-jcm-emerald bg-white">
-        </div>
-        <div class="flex flex-wrap gap-2" id="program-filters">
-            <button data-filter="all" onclick="setProgramFilter('all',this)" class="filter-btn active text-[11px] font-bold px-4 py-2 rounded-full border border-slate-200 bg-white">All</button>
-            <button data-filter="EDUCATION" onclick="setProgramFilter('EDUCATION',this)" class="filter-btn text-[11px] font-bold px-4 py-2 rounded-full border border-slate-200 bg-white">Education</button>
-            <button data-filter="VOCATIONAL" onclick="setProgramFilter('VOCATIONAL',this)" class="filter-btn text-[11px] font-bold px-4 py-2 rounded-full border border-slate-200 bg-white">Vocational</button>
-            <button data-filter="MEDICAL" onclick="setProgramFilter('MEDICAL',this)" class="filter-btn text-[11px] font-bold px-4 py-2 rounded-full border border-slate-200 bg-white">Health</button>
-            <button data-filter="FAITH" onclick="setProgramFilter('FAITH',this)" class="filter-btn text-[11px] font-bold px-4 py-2 rounded-full border border-slate-200 bg-white">Faith</button>
-            <button data-filter="SHELTER" onclick="setProgramFilter('SHELTER',this)" class="filter-btn text-[11px] font-bold px-4 py-2 rounded-full border border-slate-200 bg-white">Shelter</button>
-            <button data-filter="SELF" onclick="setProgramFilter('SELF',this)" class="filter-btn text-[11px] font-bold px-4 py-2 rounded-full border border-slate-200 bg-white">Farm</button>
-        </div>
-    </div>
-    <p id="program-count" class="text-[11px] font-bold text-slate-500 uppercase tracking-wider"></p>
     <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6" id="programs-grid-container">
         <!-- Dynamically Populated via JS -->
     </div>
@@ -536,30 +426,6 @@
     </div>
 </div>
     <!-- Challenges & Bottlenecks Section -->
-    <div class="grid md:grid-cols-3 gap-4">
-        <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm text-center space-y-2"><div class="w-10 h-10 mx-auto rounded-full bg-jcm-emerald text-white flex items-center justify-center font-black">1</div><h4 class="font-bold text-sm text-jcm-navy">Visit or Call</h4><p class="text-[11px] text-slate-500">Tour JCM in Nyendo or WhatsApp +256 750 838511. Tell us the child's age & needs.</p></div>
-        <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm text-center space-y-2"><div class="w-10 h-10 mx-auto rounded-full bg-jcm-gold text-jcm-navy flex items-center justify-center font-black">2</div><h4 class="font-bold text-sm text-jcm-navy">Needs Assessment</h4><p class="text-[11px] text-slate-500">Our caregivers assess shelter, schooling level, health and guardianship status.</p></div>
-        <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm text-center space-y-2"><div class="w-10 h-10 mx-auto rounded-full bg-jcm-sky text-white flex items-center justify-center font-black">3</div><h4 class="font-bold text-sm text-jcm-navy">Placement & Mentorship</h4><p class="text-[11px] text-slate-500">Child joins home, study center or skills track with a dedicated mentor. Free of charge.</p></div>
-    </div>
-    <div class="glass-card rounded-3xl p-6 sm:p-8 overflow-x-auto">
-        <h3 class="text-lg font-bold text-jcm-navy font-serif mb-1">Weekly Program Rhythm</h3>
-        <p class="text-[11px] text-slate-500 mb-4">Tap a program card above for full details. Below is the typical week.</p>
-        <table class="w-full text-xs min-w-[560px]">
-            <thead><tr class="text-left text-[10px] uppercase tracking-wider text-slate-400 border-b"><th class="py-2 pr-2">Day</th><th class="py-2 pr-2">Education</th><th class="py-2 pr-2">Vocational</th><th class="py-2">Outreach / Faith</th></tr></thead>
-            <tbody class="text-slate-600 font-medium">
-                <tr class="border-b border-slate-100"><td class="py-2.5 font-bold text-jcm-navy">Mon – Fri</td><td>8am–1pm classes</td><td>2–5pm labs (tailoring / hair / catering)</td><td>Evening devotion & counselling</td></tr>
-                <tr class="border-b border-slate-100"><td class="py-2.5 font-bold text-jcm-navy">Saturday</td><td>Revision & exams</td><td>Open workshop + farm practice</td><td>Community service & fellowship</td></tr>
-                <tr><td class="py-2.5 font-bold text-jcm-navy">Sunday</td><td colspan="2">Rest & family time in residence</td><td>Church gathering & character seminar</td></tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="space-y-3">
-        <h3 class="text-lg font-bold text-jcm-navy font-serif">Program FAQs</h3>
-        <div class="grid md:grid-cols-2 gap-3">
-            <div class="accordion-item bg-white rounded-2xl border border-slate-100"><button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-bold text-[13px] text-jcm-navy">What does it cost families? <i class="fa-solid fa-chevron-down accordion-chevron text-jcm-emerald text-xs"></i></button><div class="accordion-body px-4 pb-4 text-[11px] text-slate-500">Nothing. All six programs are free to beneficiaries thanks to sponsors and donors.</div></div>
-            <div class="accordion-item bg-white rounded-2xl border border-slate-100"><button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-bold text-[13px] text-jcm-navy">Can out-of-school youth join? <i class="fa-solid fa-chevron-down accordion-chevron text-jcm-emerald text-xs"></i></button><div class="accordion-body px-4 pb-4 text-[11px] text-slate-500">Yes — ages 13–18 with no schooling needed for the vocational track. Registration is open Mon–Sat.</div></div>
-        </div>
-    </div>
     <div class="glass-card rounded-3xl p-8 border-l-8 border-l-rose-500 bg-white/40 backdrop-blur-sm">
         <div class="mb-6">
             <h3 class="text-2xl font-serif font-bold text-jcm-navy">Challenges & Bottlenecks</h3>
@@ -613,35 +479,8 @@
                 </ul>
             </div>
         </div>
-            </div>
-
-            <!-- In-kind + FAQ + pledge -->
-            <div class="grid lg:grid-cols-2 gap-6 text-left">
-                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-100 shadow-sm space-y-4">
-                    <h3 class="font-serif font-bold text-xl text-jcm-navy"><i class="fa-solid fa-box-open text-jcm-gold mr-1"></i> In-Kind Wishlist</h3>
-                    <p class="text-xs text-slate-500">Can't give cash? These items change daily life. Tick what you can bring, then send via WhatsApp.</p>
-                    <div class="grid sm:grid-cols-2 gap-2 text-xs font-medium text-slate-600" id="wishlist">
-                        <label class="flex items-center gap-2 bg-jcm-cream rounded-xl px-3 py-2.5 border"><input type="checkbox" class="accent-emerald-600" value="Rice & beans"> Rice & beans</label>
-                        <label class="flex items-center gap-2 bg-jcm-cream rounded-xl px-3 py-2.5 border"><input type="checkbox" class="accent-emerald-600" value="Cooking oil"> Cooking oil</label>
-                        <label class="flex items-center gap-2 bg-jcm-cream rounded-xl px-3 py-2.5 border"><input type="checkbox" class="accent-emerald-600" value="Textbooks & stationery"> Textbooks & stationery</label>
-                        <label class="flex items-center gap-2 bg-jcm-cream rounded-xl px-3 py-2.5 border"><input type="checkbox" class="accent-emerald-600" value="Sewing machines/fabric"> Sewing machines / fabric</label>
-                        <label class="flex items-center gap-2 bg-jcm-cream rounded-xl px-3 py-2.5 border"><input type="checkbox" class="accent-emerald-600" value="Mosquito nets"> Mosquito nets</label>
-                        <label class="flex items-center gap-2 bg-jcm-cream rounded-xl px-3 py-2.5 border"><input type="checkbox" class="accent-emerald-600" value="Medical supplies"> Medical supplies</label>
-                    </div>
-                    <button onclick="sendWishlist()" class="w-full bg-jcm-navy text-white text-xs font-black py-3 rounded-xl hover:bg-jcm-emerald"><i class="fa-brands fa-whatsapp text-emerald-400 mr-1"></i> SEND WISHLIST VIA WHATSAPP</button>
-                </div>
-                <div class="space-y-4">
-                    <div class="accordion-item bg-white rounded-2xl border border-slate-100"><button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-bold text-[13px] text-jcm-navy">Are online payments live yet? <i class="fa-solid fa-chevron-down accordion-chevron text-jcm-emerald text-xs"></i></button><div class="accordion-body px-4 pb-4 text-[11px] text-slate-500">PayPal, GoFundMe, cards & mobile money are being connected — cards show "Coming Soon". Meanwhile WhatsApp (+256 750 838511) confirms every gift instantly.</div></div>
-                    <div class="accordion-item bg-white rounded-2xl border border-slate-100"><button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-bold text-[13px] text-jcm-navy">Will I get updates on my sponsored child? <i class="fa-solid fa-chevron-down accordion-chevron text-jcm-emerald text-xs"></i></button><div class="accordion-body px-4 pb-4 text-[11px] text-slate-500">Yes — termly school progress, photos and letters via email/WhatsApp, plus visit invitations.</div></div>
-                    <div class="accordion-item bg-white rounded-2xl border border-slate-100"><button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-bold text-[13px] text-jcm-navy">Can I visit JCM in person? <i class="fa-solid fa-chevron-down accordion-chevron text-jcm-emerald text-xs"></i></button><div class="accordion-body px-4 pb-4 text-[11px] text-slate-500">Absolutely. P.O. Box 41, Nyendo, Masaka — Mon to Sat. Message us first so the children can welcome you.</div></div>
-                    <form onsubmit="handlePledge(event)" class="bg-jcm-navy rounded-2xl p-5 space-y-3">
-                        <h4 class="font-bold text-sm text-jcm-gold">Make a Pledge (we'll confirm)</h4>
-                        <div class="grid grid-cols-2 gap-2"><input id="pledge-name" required placeholder="Your name" class="px-3 py-2.5 rounded-xl text-xs bg-white/10 border border-white/15 text-white placeholder:text-slate-400 focus:outline-none focus:border-jcm-gold"><input id="pledge-amt" required type="number" min="1" placeholder="Amount USD" class="px-3 py-2.5 rounded-xl text-xs bg-white/10 border border-white/15 text-white placeholder:text-slate-400 focus:outline-none focus:border-jcm-gold"></div>
-                        <button class="w-full bg-jcm-gold text-jcm-navy text-xs font-black py-3 rounded-xl hover:bg-yellow-400">PLEDGE VIA WHATSAPP</button>
-                    </form>
-                </div>
-            </div>
-        </section>
+    </div>
+</section>
 
         <!-- ================= TAB 3: OUR IMPACT ================= -->
 <section id="view-impact" class="hidden space-y-12 fade-up">
@@ -652,45 +491,6 @@
     </div>
 
     <!-- Feature Badges -->
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 text-center">
-        <div class="bg-jcm-navy text-white rounded-2xl p-5"><div class="text-2xl font-black text-jcm-gold"><span class="counter" data-target="267">0</span></div><p class="text-[10px] font-bold uppercase tracking-wider text-slate-300">Daily Meals Served</p></div>
-        <div class="bg-white rounded-2xl p-5 border border-slate-100"><div class="text-2xl font-black text-jcm-emerald"><span class="counter" data-target="45">0</span></div><p class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Vocational Learners</p></div>
-        <div class="bg-white rounded-2xl p-5 border border-slate-100"><div class="text-2xl font-black text-jcm-sky"><span class="counter" data-target="120">0</span>+</div><p class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Families Reached / Year</p></div>
-        <div class="bg-white rounded-2xl p-5 border border-slate-100"><div class="text-2xl font-black text-jcm-navy"><span class="counter" data-target="100">0</span>%</div><p class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Donations to Programs</p></div>
-    </div>
-    <div class="grid md:grid-cols-2 gap-6">
-        <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-4">
-            <h3 class="text-sm font-black uppercase tracking-wider text-jcm-navy">Where Your Gift Goes</h3>
-            <div class="space-y-3 text-xs font-bold">
-                <div><div class="flex justify-between mb-1"><span>Food & Nutrition 40%</span><span class="text-jcm-emerald">40%</span></div><div class="h-2.5 bg-slate-100 rounded-full overflow-hidden"><div class="animate-bar h-full bg-jcm-emerald rounded-full" data-width="40%" style="width:0"></div></div></div>
-                <div><div class="flex justify-between mb-1"><span>Education & Materials 30%</span><span class="text-jcm-sky">30%</span></div><div class="h-2.5 bg-slate-100 rounded-full overflow-hidden"><div class="animate-bar h-full bg-jcm-sky rounded-full" data-width="30%" style="width:0"></div></div></div>
-                <div><div class="flex justify-between mb-1"><span>Shelter & Healthcare 20%</span><span class="text-jcm-gold">20%</span></div><div class="h-2.5 bg-slate-100 rounded-full overflow-hidden"><div class="animate-bar h-full bg-jcm-gold rounded-full" data-width="20%" style="width:0"></div></div></div>
-                <div><div class="flex justify-between mb-1"><span>Skills Tools & Farm 10%</span><span class="text-jcm-navy">10%</span></div><div class="h-2.5 bg-slate-100 rounded-full overflow-hidden"><div class="animate-bar h-full bg-jcm-navy rounded-full" data-width="10%" style="width:0"></div></div></div>
-            </div>
-            <p class="text-[11px] text-slate-500 italic">Illustrative allocation — every gift is stewarded for shelter, meals, learning and health.</p>
-        </div>
-        <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-4">
-            <h3 class="text-sm font-black uppercase tracking-wider text-jcm-navy flex items-center gap-2"><i class="fa-solid fa-calculator text-jcm-emerald"></i> See Your Impact</h3>
-            <label class="text-xs font-bold text-slate-600">Monthly gift: <span id="impact-amt-label" class="text-jcm-emerald font-black">$25</span></label>
-            <input type="range" id="impact-range" min="5" max="200" value="25" step="5" oninput="updateImpactCalc(this.value)" class="w-full">
-            <div class="grid grid-cols-3 gap-3 text-center">
-                <div class="bg-jcm-cream rounded-xl p-3"><div id="impact-meals" class="font-black text-jcm-navy">50</div><div class="text-[10px] uppercase font-bold text-slate-500">Meals</div></div>
-                <div class="bg-jcm-cream rounded-xl p-3"><div id="impact-books" class="font-black text-jcm-navy">5</div><div class="text-[10px] uppercase font-bold text-slate-500">Book Sets</div></div>
-                <div class="bg-jcm-cream rounded-xl p-3"><div id="impact-days" class="font-black text-jcm-navy">12</div><div class="text-[10px] uppercase font-bold text-slate-500">Shelter Days</div></div>
-            </div>
-            <button onclick="switchView('donations')" class="w-full bg-jcm-emerald text-white font-bold py-3 rounded-xl text-xs uppercase tracking-widest hover:bg-jcm-navy">Give This Amount <i class="fa-solid fa-arrow-right ml-1"></i></button>
-        </div>
-    </div>
-    <div class="glass-card rounded-3xl p-6 sm:p-8">
-        <h3 class="text-sm font-black uppercase tracking-wider text-jcm-navy mb-4">Our Journey Since 2017</h3>
-        <div class="flex gap-3 overflow-x-auto no-scrollbar pb-2 text-xs">
-            <div class="min-w-[170px] bg-white rounded-xl p-4 border border-slate-100"><div class="font-black text-jcm-gold">2017</div><p class="font-bold text-jcm-navy mt-1">Founded by Pst. Pius</p><p class="text-slate-500 mt-1">A safe shelter for orphans & street children in Nyendo.</p></div>
-            <div class="min-w-[170px] bg-white rounded-xl p-4 border border-slate-100"><div class="font-black text-jcm-emerald">2019</div><p class="font-bold text-jcm-navy mt-1">Study Center Opens</p><p class="text-slate-500 mt-1">Tuition-free preschool to middle-school classes.</p></div>
-            <div class="min-w-[170px] bg-white rounded-xl p-4 border border-slate-100"><div class="font-black text-jcm-sky">2021</div><p class="font-bold text-jcm-navy mt-1">Vocational Wing</p><p class="text-slate-500 mt-1">Tailoring, hairdressing, catering & farm skills.</p></div>
-            <div class="min-w-[170px] bg-white rounded-xl p-4 border border-slate-100"><div class="font-black text-purple-600">2024</div><p class="font-bold text-jcm-navy mt-1">183+ Served Daily</p><p class="text-slate-500 mt-1">89 housed, 180+ pupils, daily meals & outreach.</p></div>
-            <div class="min-w-[170px] bg-jcm-navy text-white rounded-xl p-4"><div class="font-black text-jcm-gold">2026</div><p class="font-bold mt-1">You Join Us</p><p class="text-slate-300 mt-1">Sponsor, volunteer or visit — write the next chapter.</p></div>
-        </div>
-    </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 space-y-3">
             <div class="w-12 h-12 bg-jcm-gold/15 text-jcm-gold rounded-xl flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-stamp"></i></div>
@@ -878,39 +678,39 @@
                         <!-- Member 7-->
                         <div class="bg-white p-3 rounded-2xl border border-slate-100 shadow-sm text-center space-y-2 group">
                             <div class="aspect-square rounded-xl overflow-hidden bg-slate-100 flex items-center justify-center">
-                                <img src="donT.jpg" onclick="openLightbox(this.src)" class="w-full h-full object-cover cursor-zoom-in" alt="JCM volunteer teacher">
+                                <img src="donT.jpg" class="w-full h-full object-cover" alt="Jedidiah Children's Mission Team">
                             </div>
                             <div>
-                                <h5 class="font-bold text-jcm-navy text-sm truncate">Volunteer Teachers</h5>
-                                <p class="text-[11px] text-slate-500 font-semibold">Study Center • Daily Lessons</p>
+                                <h5 class="font-bold text-jcm-navy text-sm truncate"></h5>
+                                <p class="text-[11px] text-slate-500 font-semibold"></p>
                             </div>
                         </div>
                         <!--mEMBER 8-->
                         <div class="bg-white p-3 rounded-2xl border border-slate-100 shadow-sm text-center space-y-2 group">
                             <div class="aspect-square rounded-xl overflow-hidden bg-slate-100 flex items-center justify-center">
-                                <img src="donP.jpg" onclick="openLightbox(this.src)" class="w-full h-full object-cover cursor-zoom-in" alt="JCM caregivers">
+                                <img src="donP.jpg" class="w-full h-full object-cover" alt="Jedidiah Children's Mission Team">
                             </div>
                             <div>
-                                <h5 class="font-bold text-jcm-navy text-sm truncate">Caregivers & Mentors</h5>
-                                <p class="text-[11px] text-slate-500 font-semibold">Home Life • Counselling</p>
+                                <h5 class="font-bold text-jcm-navy text-sm truncate"></h5>
+                                <p class="text-[11px] text-slate-500 font-semibold"></p>
                             </div>
                         </div>
                         <div class="bg-white p-3 rounded-2xl border border-slate-100 shadow-sm text-center space-y-2 group">
                             <div class="aspect-square rounded-xl overflow-hidden bg-slate-100 flex items-center justify-center">
-                                <img src="donA.jpg" onclick="openLightbox(this.src)" class="w-full h-full object-cover cursor-zoom-in" alt="JCM skills trainers">
+                                <img src="donA.jpg" class="w-full h-full object-cover" alt="Jedidiah Children's Mission Team">
                             </div>
                             <div>
-                                <h5 class="font-bold text-jcm-navy text-sm truncate">Skills Trainers</h5>
-                                <p class="text-[11px] text-slate-500 font-semibold">Tailoring • Hair • Catering</p>
+                                <h5 class="font-bold text-jcm-navy text-sm truncate"></h5>
+                                <p class="text-[11px] text-slate-500 font-semibold"></p>
                             </div>
                         </div>
                         <div class="bg-white p-3 rounded-2xl border border-slate-100 shadow-sm text-center space-y-2 group">
                             <div class="aspect-square rounded-xl overflow-hidden bg-slate-100 flex items-center justify-center">
-                                <img src="don6.jpg" onclick="openLightbox(this.src)" class="w-full h-full object-cover cursor-zoom-in" alt="JCM outreach team">
+                                <img src="don6.jpg" class="w-full h-full object-cover" alt="Jedidiah Children's Mission Team">
                             </div>
                             <div>
-                                <h5 class="font-bold text-jcm-navy text-sm truncate">Outreach Team</h5>
-                                <p class="text-[11px] text-slate-500 font-semibold">Health • Farm • Fellowship</p>
+                                <h5 class="font-bold text-jcm-navy text-sm truncate"></h5>
+                                <p class="text-[11px] text-slate-500 font-semibold"></p>
                             </div>
                         </div>
                     </div>
@@ -970,11 +770,6 @@
             </div>
 
             <!-- Donation Call Banner (Nice CTA with placeholders) -->
-            <div class="grid md:grid-cols-3 gap-4 text-left">
-                <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm space-y-2"><div class="w-9 h-9 rounded-lg bg-jcm-navy text-jcm-gold flex items-center justify-center"><i class="fa-solid fa-sitemap text-sm"></i></div><h4 class="font-bold text-sm text-jcm-navy">How We're Organized</h4><p class="text-[11px] text-slate-500 leading-relaxed">Founder & Director → Home Manager → Head Teacher → Skills Lead → Health & Outreach Coordinators → Volunteers. Small team, clear accountability.</p></div>
-                <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm space-y-2"><div class="w-9 h-9 rounded-lg bg-jcm-emerald/10 text-jcm-emerald flex items-center justify-center"><i class="fa-solid fa-handshake-angle text-sm"></i></div><h4 class="font-bold text-sm text-jcm-navy">Safeguarding Promise</h4><p class="text-[11px] text-slate-500 leading-relaxed">Gated residence, supervised routines, mentor pairing and visitor protocols keep every child safe, known and cared for.</p></div>
-                <div class="bg-jcm-navy rounded-2xl p-6 text-white space-y-3"><h4 class="font-bold text-sm text-jcm-gold">Serve With Us</h4><p class="text-[11px] text-slate-300">Teachers, tailors, nurses, cooks, coaches & friends — 1 week or 1 year, on-site or remote.</p><button onclick="switchView('home');setTimeout(()=>document.getElementById('contactForm')?.scrollIntoView({behavior:'smooth'}),400)" class="w-full bg-jcm-gold text-jcm-navy text-[11px] font-black py-2.5 rounded-xl hover:bg-yellow-400">APPLY TO VOLUNTEER</button></div>
-            </div>
             <div class="bg-gradient-to-r from-jcm-gold/20 to-jcm-emerald/10 p-8 rounded-3xl text-center border border-jcm-gold/30 space-y-4">
                 <h4 class="font-bold text-jcm-navy text-xl">Support our Mission</h4>
                 <p class="text-sm text-slate-600 max-w-xl mx-auto">
@@ -1021,39 +816,6 @@
         </div>
     </div>
 </div>
-
-            <!-- Sponsorship tiers + calculator -->
-            <div class="grid lg:grid-cols-2 gap-6 text-left">
-                <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-4">
-                    <h3 class="font-serif font-bold text-xl text-jcm-navy">Choose Your Sponsorship Level</h3>
-                    <p class="text-xs text-slate-500">Tap a tier to preview its monthly impact. Then use a payment card below or WhatsApp us to confirm.</p>
-                    <div class="grid sm:grid-cols-3 gap-3" id="tier-grid">
-                        <button onclick="selectTier(this,'Seed — $15/mo','45 meals + school supplies for 1 pupil')" class="tier-card text-left bg-white rounded-2xl p-4 border-2 border-slate-100 hover:border-jcm-gold"><div class="font-black text-jcm-navy">$15</div><div class="text-[11px] font-bold text-jcm-gold uppercase">Seed</div><p class="text-[11px] text-slate-500 mt-1">Feeds & supplies 1 pupil</p></button>
-                        <button onclick="selectTier(this,'Root — $35/mo','Shelter, meals & classes for 1 resident child')" class="tier-card selected text-left bg-white rounded-2xl p-4 border-2 border-slate-100 hover:border-jcm-emerald"><div class="font-black text-jcm-navy">$35</div><div class="text-[11px] font-bold text-jcm-emerald uppercase">Root ★ Popular</div><p class="text-[11px] text-slate-500 mt-1">Full care for 1 child</p></button>
-                        <button onclick="selectTier(this,'Branch — $70/mo','Supports 2 children + vocational tools & farm inputs')" class="tier-card text-left bg-white rounded-2xl p-4 border-2 border-slate-100 hover:border-jcm-sky"><div class="font-black text-jcm-navy">$70</div><div class="text-[11px] font-bold text-jcm-sky uppercase">Branch</div><p class="text-[11px] text-slate-500 mt-1">Lifts 2 children + tools</p></button>
-                    </div>
-                    <div class="bg-jcm-cream rounded-xl p-4 border border-jcm-navy/10 text-xs"><span class="font-bold text-jcm-navy">Selected: </span><span id="tier-output" class="text-slate-600">Root — $35/mo — Shelter, meals & classes for 1 resident child</span></div>
-                    <div>
-                        <label class="text-xs font-bold text-slate-600">Or enter custom amount: $<span id="don-amt-label">35</span>/mo</label>
-                        <input type="range" min="5" max="300" value="35" oninput="document.getElementById('don-amt-label').innerText=this.value;document.getElementById('don-impact-preview').innerText=Math.round(this.value*2)+' meals + '+Math.max(1,Math.round(this.value/7))+' book sets per month'" class="w-full">
-                        <p id="don-impact-preview" class="text-[11px] text-jcm-emerald font-bold mt-1">70 meals + 5 book sets per month</p>
-                    </div>
-                </div>
-                <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-4 border-t-4 border-t-rose-500">
-                    <div class="flex justify-between items-center"><h3 class="font-serif font-bold text-xl text-jcm-navy">Urgent: Moureen's Care</h3><span class="text-[10px] font-black bg-rose-100 text-rose-600 px-3 py-1 rounded-full uppercase">62% funded</span></div>
-                    <div class="h-3 bg-slate-100 rounded-full overflow-hidden"><div class="animate-bar h-full bg-gradient-to-r from-rose-500 to-jcm-gold rounded-full" data-width="62%" style="width:0"></div></div>
-                    <div class="flex justify-between text-[11px] font-bold text-slate-500"><span>Raised: $1,240</span><span>Goal: $2,000</span></div>
-                    <ul class="text-xs text-slate-600 space-y-1.5 font-medium">
-                        <li><i class="fa-solid fa-check text-jcm-emerald mr-1"></i> Specialized wheelchair & fittings</li>
-                        <li><i class="fa-solid fa-check text-jcm-emerald mr-1"></i> Critical medical treatment</li>
-                        <li><i class="fa-solid fa-check text-jcm-emerald mr-1"></i> Physio & home-care follow-up</li>
-                    </ul>
-                    <div class="flex flex-col sm:flex-row gap-3">
-                        <a href="https://wa.me/256750838511?text=Hello%20JCM!%20I%20want%20to%20help%20Moureen%20with%20a%20gift." target="_blank" class="flex-1 text-center bg-rose-500 hover:bg-jcm-navy text-white text-xs font-black py-3 rounded-xl transition-colors"><i class="fa-brands fa-whatsapp mr-1"></i> GIVE VIA WHATSAPP</a>
-                        <button onclick="copyText('JCM Moureen Fund — WhatsApp +256 750 838511 / piuskabiswa@gmail.com')" class="flex-1 bg-white border border-slate-200 text-xs font-bold py-3 rounded-xl hover:bg-slate-50"><i class="fa-solid fa-copy mr-1"></i> COPY GIVING INFO</button>
-                    </div>
-                </div>
-            </div>
 
             <!-- Donation Options Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1205,13 +967,6 @@
         </div>
     </nav>
 
-    <!-- LIGHTBOX + BACK TO TOP -->
-    <div id="lightbox" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 bg-jcm-navy/85" onclick="closeLightbox()">
-        <img id="lightbox-img" src="" alt="Preview" class="max-h-[85vh] max-w-full rounded-2xl shadow-2xl border-4 border-white">
-        <button class="absolute top-5 right-5 w-10 h-10 rounded-full bg-white text-jcm-navy font-bold"><i class="fa-solid fa-xmark"></i></button>
-    </div>
-    <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-24 lg:bottom-8 right-4 z-40 w-11 h-11 rounded-full bg-jcm-navy text-jcm-gold shadow-xl flex items-center justify-center border border-jcm-gold/40 hover:bg-jcm-emerald hover:text-white" aria-label="Back to top"><i class="fa-solid fa-arrow-up text-sm"></i></button>
-
     <!-- PROGRAM DETAIL MODAL -->
     <div id="product-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4" aria-modal="true">
         <div class="absolute inset-0 bg-jcm-navy/70 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
@@ -1351,8 +1106,8 @@
             photoList.forEach((imagePath, index) => {
                 const imgNum = (index % 10) + 1;
                 html += `
-                    <div class="w-60 h-40 flex-shrink-0 rounded-2xl overflow-hidden shadow-md border-2 border-white relative group bg-slate-200 cursor-zoom-in" onclick="openLightbox('${imagePath}')">
-                        <img src="${imagePath}" alt="Jedidiah Children's Mission Activity Photo ${imgNum}" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="w-60 h-40 flex-shrink-0 rounded-2xl overflow-hidden shadow-md border-2 border-white relative group bg-slate-200">
+                        <img src="${imagePath}" alt="Jedidiah Children's Mission Activity Photo ${imgNum}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         
                         <div class="absolute inset-0 bg-gradient-to-t from-jcm-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
                             <span class="text-[10px] font-bold text-white uppercase tracking-wider"><i class="fa-solid fa-camera text-jcm-gold"></i> Mission activity #${imgNum}</span>
@@ -1364,33 +1119,16 @@
             track.innerHTML = html;
         }
 
-        // 2. Render Programs Grid (filterable + searchable)
-        let activeProgramFilter = 'all';
+        // 2. Render Programs Grid
         function renderProgramsGrid() {
-            filterPrograms();
-        }
-        function setProgramFilter(f, btn) {
-            activeProgramFilter = f;
-            document.querySelectorAll('#program-filters .filter-btn').forEach(b => b.classList.remove('active'));
-            if(btn) btn.classList.add('active');
-            filterPrograms();
-        }
-        function filterPrograms() {
             const container = document.getElementById('programs-grid-container');
             if(!container) return;
-            const q = (document.getElementById('program-search')?.value || '').toLowerCase();
-            const list = missionPrograms.map((item, idx) => ({...item, idx})).filter(it => {
-                const matchQ = !q || (it.title+' '+it.tagline+' '+it.tag+' '+it.desc).toLowerCase().includes(q);
-                const matchF = activeProgramFilter === 'all' || it.tag.includes(activeProgramFilter);
-                return matchQ && matchF;
-            });
-            const count = document.getElementById('program-count');
-            if(count) count.innerText = `Showing ${list.length} of ${missionPrograms.length} programs`;
-            container.innerHTML = list.length ? list.map((item) => `
-                <article onclick="openModal(${item.idx})" class="group glass-card rounded-2xl p-3.5 cursor-pointer hover:-translate-y-1.5 transition-all duration-300 relative flex flex-col justify-between">
+            
+            container.innerHTML = missionPrograms.map((item, idx) => `
+                <article onclick="openModal(${idx})" class="group glass-card rounded-2xl p-3.5 cursor-pointer hover:-translate-y-1.5 transition-all duration-300 relative flex flex-col justify-between">
                     <div>
                         <div class="aspect-[4/3] rounded-xl overflow-hidden mb-3 bg-slate-100 relative">
-                            <img src="${item.image}" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="${item.title}">
+                            <img src="${item.image}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="${item.title}">
                             <span class="absolute top-2 left-2 bg-jcm-navy/90 text-white text-[9px] font-black px-2 py-0.5 rounded backdrop-blur">${item.tag}</span>
                         </div>
                         <h3 class="font-bold text-jcm-navy text-sm sm:text-base leading-snug">${item.title}</h3>
@@ -1401,104 +1139,7 @@
                         <i class="fa-solid fa-circle-arrow-right group-hover:translate-x-1 transition-transform"></i>
                     </div>
                 </article>
-            `).join('') : `<div class="col-span-full text-center py-10 text-sm text-slate-500 bg-white rounded-2xl border border-dashed">No programs match. Try "farm", "health" or "tailoring".</div>`;
-        }
-
-        // 2b. Shared interactive utilities
-        function toggleAccordion(btn) {
-            const item = btn.closest('.accordion-item');
-            const wasOpen = item.classList.contains('open');
-            document.querySelectorAll('.accordion-item.open').forEach(i => i.classList.remove('open'));
-            if(!wasOpen) item.classList.add('open');
-        }
-        let testiIndex = 0;
-        function moveTesti(dir) {
-            const track = document.getElementById('testi-track');
-            if(!track) return;
-            const total = track.children.length;
-            testiIndex = (testiIndex + dir + total) % total;
-            const card = track.children[0];
-            const gap = 16;
-            const step = card.getBoundingClientRect().width + gap;
-            const maxShift = step * (total - 1);
-            let shift = Math.min(testiIndex * step, maxShift);
-            if(window.innerWidth < 640) shift = testiIndex * step;
-            track.style.transform = `translateX(-${shift}px)`;
-            document.querySelectorAll('#testi-dots .tab-dot').forEach((d,i) => {
-                d.className = 'tab-dot w-2 h-2 rounded-full ' + (i === testiIndex % 3 ? 'bg-jcm-emerald' : 'bg-slate-300');
-            });
-        }
-        function openLightbox(src) {
-            const lb = document.getElementById('lightbox');
-            document.getElementById('lightbox-img').src = src;
-            lb.classList.remove('hidden'); lb.classList.add('flex');
-        }
-        function closeLightbox() {
-            const lb = document.getElementById('lightbox');
-            lb.classList.add('hidden'); lb.classList.remove('flex');
-        }
-        function updateImpactCalc(v) {
-            document.getElementById('impact-amt-label').innerText = '$' + v;
-            document.getElementById('impact-meals').innerText = Math.round(v * 2);
-            document.getElementById('impact-books').innerText = Math.max(1, Math.round(v / 5));
-            document.getElementById('impact-days').innerText = Math.max(1, Math.round(v / 2));
-        }
-        function selectTier(btn, label, desc) {
-            document.querySelectorAll('.tier-card').forEach(c => c.classList.remove('selected'));
-            btn.classList.add('selected');
-            document.getElementById('tier-output').innerText = label + ' — ' + desc;
-        }
-        function copyText(t) {
-            navigator.clipboard?.writeText(t).then(() => showMiniToast('Giving info copied!'));
-        }
-        function showMiniToast(msg) {
-            const toast = document.getElementById('network-toast');
-            const content = document.getElementById('toast-content');
-            document.getElementById('toast-icon').className = 'fa-solid fa-circle-check text-sm';
-            document.getElementById('toast-text').innerText = msg;
-            content.className = 'px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 text-xs font-bold uppercase tracking-wider text-white bg-jcm-navy/95 border border-jcm-gold/30';
-            toast.classList.remove('hidden');
-            setTimeout(() => toast.classList.add('hidden'), 2500);
-        }
-        function sendWishlist() {
-            const items = [...document.querySelectorAll('#wishlist input:checked')].map(i => i.value);
-            const msg = encodeURIComponent('Hello JCM! I would like to donate in-kind: ' + (items.length ? items.join(', ') : 'general supplies') + '. Please advise on drop-off.');
-            window.open('https://wa.me/256750838511?text=' + msg, '_blank');
-        }
-        function handlePledge(e) {
-            e.preventDefault();
-            const n = document.getElementById('pledge-name').value;
-            const a = document.getElementById('pledge-amt').value;
-            window.open('https://wa.me/256750838511?text=' + encodeURIComponent(`Hello JCM! I, ${n}, pledge $${a} to support the mission. Please confirm next steps.`), '_blank');
-        }
-        // Animated counters + bars on scroll
-        let countersDone = false;
-        function initScrollAnimations() {
-            const io = new IntersectionObserver((entries) => {
-                entries.forEach(en => {
-                    if(en.isIntersecting) {
-                        en.target.querySelectorAll('.counter').forEach(runCounter);
-                        en.target.querySelectorAll('.animate-bar').forEach(b => { b.style.width = b.dataset.width || '50%'; });
-                        if(en.target.querySelector && (en.target.querySelector('.counter') || en.target.querySelector('.animate-bar'))) io.unobserve(en.target);
-                    }
-                });
-            }, { threshold: 0.25 });
-            document.querySelectorAll('section, div.glass-card').forEach(el => io.observe(el));
-            window.addEventListener('scroll', () => {
-                document.getElementById('back-to-top')?.classList.toggle('show', window.scrollY > 600);
-            }, { passive: true });
-            document.addEventListener('keydown', e => { if(e.key === 'Escape') { closeModal(); closeLightbox(); } });
-        }
-        function runCounter(el) {
-            if(el.dataset.done) return; el.dataset.done = '1';
-            const target = parseInt(el.dataset.target || '0', 10);
-            const dur = 1400; const t0 = performance.now();
-            function tick(t) {
-                const p = Math.min((t - t0) / dur, 1);
-                el.innerText = Math.round(target * (1 - Math.pow(1 - p, 3)));
-                if(p < 1) requestAnimationFrame(tick);
-            }
-            requestAnimationFrame(tick);
+            `).join('');
         }
 
         // 3. Tab Navigation Router
@@ -1677,11 +1318,6 @@
             renderMissionCarousel();
             renderProgramsGrid();
             initNetworkMonitor();
-            initScrollAnimations();
-            // Gallery lightbox: any image in Impact gallery opens preview
-            document.querySelectorAll('#view-impact img').forEach(img => {
-                if(!img.getAttribute('onclick')) { img.classList.add('cursor-zoom-in'); img.addEventListener('click', () => openLightbox(img.src)); }
-            });
         });
     </script>
 </body>
